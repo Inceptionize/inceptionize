@@ -3,6 +3,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "test": "jest --colors",
     "lint": "eslint . --ext .js,.ts,.tsx --ignore-pattern node_modules/ --ignore-pattern resources/public/",
     "lint:fix": "npm run lint --fix"
   },
@@ -12,6 +13,8 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.8.0",
+    "@testing-library/react": "^10.0.4",
     "@types/node": "^14.0.4",
     "@types/react": "^16.9.35",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
@@ -21,7 +24,9 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "3.1.1",
     "eslint-plugin-react": "7.16.0",
+    "jest": "^26.0.1",
     "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
     "typescript": "^3.9.3"
   }
 }
