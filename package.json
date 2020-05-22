@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "test": "jest --colors",
     "lint": "eslint . --ext .js,.ts,.tsx --ignore-pattern node_modules/ --ignore-pattern resources/public/",
