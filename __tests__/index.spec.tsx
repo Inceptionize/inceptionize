@@ -9,6 +9,6 @@ describe("HomePage", () => {
   it("renders welcome message text", () => {
     const { getByText } = render(<HomePage />);
 
-    expect(getByText("Inceptionize Application! Coming Soon...")).toBeInTheDocument();
+    expect(getByText("Inceptionize! Coming Soon...")).toBeInTheDocument();
   });
 });
