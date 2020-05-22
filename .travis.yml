@@ -2,7 +2,6 @@ dist: xenial
 language: node_js
 node_js:
   - 12
-before_install:
 install:
   - npm ci
 script:
