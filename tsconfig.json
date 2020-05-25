@@ -12,8 +12,8 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "noImplicitAny": true,
-    "noUnusedLocals": true, // Report errors on unused locals
-    "noUnusedParameters": true, // Report errors on unused parameters
+    "noUnusedLocals": true, 
+    "noUnusedParameters": true, 
     "removeComments": true,
     "preserveConstEnums": true,
     "esModuleInterop": true,
