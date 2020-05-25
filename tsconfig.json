@@ -11,6 +11,11 @@
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true, // Report errors on unused locals
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "removeComments": true,
+    "preserveConstEnums": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
