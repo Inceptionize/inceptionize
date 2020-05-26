@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import Layout from "../components/Layout";
-import DecisionButton from "../components/decision-button";
+import DecisionButton from "../components/DecisionButton";
 
 function InceptionChoice(): ReactElement {
   return (
