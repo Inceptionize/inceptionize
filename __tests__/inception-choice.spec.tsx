@@ -2,9 +2,21 @@ import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import InceptionChoice from "../pages/inception-choice";
+import Router from "next/router";
+
+const routerPushed = jest.fn();
+const mockedRouter = {
+  push: (path: string): Promise<void> => {
+    routerPushed(path);
+    return new Promise((resolve) => resolve());
+  },
+};
+Router.router = mockedRouter as any;
 
 describe("InceptionChoice", () => {
   afterEach(cleanup);
+  afterEach(jest.resetAllMocks);
+
   it("renders", () => {
     const { getByText } = render(<InceptionChoice />);
 
@@ -12,13 +24,13 @@ describe("InceptionChoice", () => {
     expect(getByText("Lean Inception")).toBeInTheDocument();
   });
 
-  xit("redirect to lean inception page when button clicked", async () => {
+  it("redirect to lean inception page when button clicked", async () => {
     const { getByText } = render(<InceptionChoice />);
 
     const LeanInceptionButton = getByText("Lean Inception");
 
     await fireEvent.click(LeanInceptionButton);
 
-    expect(getByText("Lean Inception Page")).toBeInTheDocument();
+    expect(routerPushed).toHaveBeenCalledWith("/lean-inception");
   });
 });
