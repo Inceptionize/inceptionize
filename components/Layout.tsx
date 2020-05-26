@@ -14,7 +14,7 @@ function Layout({ title, children }: LayoutProps): ReactElement {
         <title>{title}</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      ;<div className={styles.container}>{children}</div>;
+      <div className={styles.container}>{children}</div>;
     </>
   );
 }
