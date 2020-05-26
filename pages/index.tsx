@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 
 function HomePage(): ReactElement {
   return (
-    <Layout title="Inceptionize">
+    <Layout>
       <h1>Inceptionize! Coming Soon...</h1>
     </Layout>
   );

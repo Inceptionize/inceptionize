@@ -3,15 +3,14 @@ import Head from "next/head";
 import styles from "./layout.module.scss";
 
 interface LayoutProps {
-  title: string;
   children: ReactNode;
 }
 
-function Layout({ title, children }: LayoutProps): ReactElement {
+function Layout({ children }: LayoutProps): ReactElement {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>Inceptionize</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <div className={styles.container}>{children}</div>;
