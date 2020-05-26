@@ -1,12 +1,22 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, ReactNode } from "react";
+import Head from "next/head";
 import styles from "./layout.module.scss";
 
 interface LayoutProps {
-  children: React.ReactNode;
+  title: string;
+  children: ReactNode;
 }
 
-function Layout({ children }: LayoutProps): ReactElement {
-  return <div className={styles.container}>{children}</div>;
+function Layout({ title, children }: LayoutProps): ReactElement {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+      </Head>
+      ;<div className={styles.container}>{children}</div>;
+    </>
+  );
 }
 
 export default Layout;
