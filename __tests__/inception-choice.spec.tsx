@@ -38,10 +38,20 @@ describe("InceptionChoice", () => {
   it("redirect to design-sprint page when button clicked", async () => {
     const { getByText } = render(<InceptionChoice />);
 
-    const LeanInceptionButton = getByText("Design Sprint");
+    const DesignSprintButton = getByText("Design Sprint");
 
-    await fireEvent.click(LeanInceptionButton);
+    await fireEvent.click(DesignSprintButton);
 
     expect(pushed).toHaveBeenCalledWith("/design-sprint");
+  });
+
+  it("redirect to agile-team page when button clicked", async () => {
+    const { getByText } = render(<InceptionChoice />);
+
+    const AgileTeamButton = getByText("Agile Team");
+
+    await fireEvent.click(AgileTeamButton);
+
+    expect(pushed).toHaveBeenCalledWith("/agile-team");
   });
 });

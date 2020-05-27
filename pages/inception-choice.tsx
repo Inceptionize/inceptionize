@@ -8,6 +8,7 @@ function InceptionChoice(): ReactElement {
       <h2>What kind of inception are you planning?</h2>
       <DecisionButton href="/lean-inception" text="Lean Inception" />
       <DecisionButton href="/design-sprint" text="Design Sprint" />
+      <DecisionButton href="/agile-team" text="Agile Team" />
     </Layout>
   );
 }
