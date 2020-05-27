@@ -11,9 +11,7 @@ interface ButtonProps {
 function DecisionButton({ href, text }: ButtonProps): ReactElement {
   return (
     <Link href={href} passHref>
-      <a>
-        <button className={styles.descisionbutton}>{text}</button>
-      </a>
+      <a className={styles.decisionButton}>{text}</a>
     </Link>
   );
 }
