@@ -34,4 +34,14 @@ describe("InceptionChoice", () => {
 
     expect(pushed).toHaveBeenCalledWith("/lean-inception");
   });
+
+  it("redirect to design-sprint page when button clicked", async () => {
+    const { getByText } = render(<InceptionChoice />);
+
+    const LeanInceptionButton = getByText("Design Sprint");
+
+    await fireEvent.click(LeanInceptionButton);
+
+    expect(pushed).toHaveBeenCalledWith("/design-sprint");
+  });
 });
