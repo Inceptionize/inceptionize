@@ -4,13 +4,14 @@ import "@testing-library/jest-dom/extend-expect";
 import InceptionChoice from "../pages/inception-choice";
 import Router from "next/router";
 
-const routerPushed = jest.fn();
+const pushed = jest.fn();
 const mockedRouter = {
   push: (path: string): Promise<void> => {
-    routerPushed(path);
+    pushed(path);
     return new Promise((resolve) => resolve());
   },
 };
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 Router.router = mockedRouter as any;
 
 describe("InceptionChoice", () => {
@@ -31,6 +32,6 @@ describe("InceptionChoice", () => {
 
     await fireEvent.click(LeanInceptionButton);
 
-    expect(routerPushed).toHaveBeenCalledWith("/lean-inception");
+    expect(pushed).toHaveBeenCalledWith("/lean-inception");
   });
 });
