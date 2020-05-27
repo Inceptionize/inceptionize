@@ -1,12 +1,12 @@
 import React, { ReactElement } from "react";
-import Button from "../decision-button/DecisionButton";
+import DecisionButton from "../decision-button/DecisionButton";
 
 function OutcomeChoice(): ReactElement {
   return (
     <div>
-      <Button href="/coming-soon" text="MVP"></Button>
-      <Button href="/coming-soon" text="Prototype"></Button>
-      <Button href="/coming-soon" text="Agile Team Setup"></Button>
+      <DecisionButton href="/coming-soon" text="MVP"></DecisionButton>
+      <DecisionButton href="/coming-soon" text="Prototype"></DecisionButton>
+      <DecisionButton href="/coming-soon" text="Agile Team Setup"></DecisionButton>
     </div>
   );
 }

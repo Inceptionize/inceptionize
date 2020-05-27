@@ -8,7 +8,7 @@ interface ButtonProps {
   text: string;
 }
 
-function Button({ href, text }: ButtonProps): ReactElement {
+function DecisionButton({ href, text }: ButtonProps): ReactElement {
   return (
     <Link href={href} passHref>
       <a>
@@ -18,4 +18,4 @@ function Button({ href, text }: ButtonProps): ReactElement {
   );
 }
 
-export default Button;
+export default DecisionButton;
