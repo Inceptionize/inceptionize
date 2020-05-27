@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { ReactElement } from "react";
 import Link from "next/link";
+import styles from "./decisionbutton.module.scss";
 
 interface ButtonProps {
   href: string;
@@ -11,7 +12,7 @@ function Button({ href, text }: ButtonProps): ReactElement {
   return (
     <Link href={href} passHref>
       <a>
-        <button>{text}</button>
+        <button className={styles.descisionbutton}>{text}</button>
       </a>
     </Link>
   );
