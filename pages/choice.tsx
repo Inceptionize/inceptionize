@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import Layout from "../components/layout/Layout";
 import DecisionButton from "../components/decision-button/DecisionButton";
 
-function InceptionChoice(): ReactElement {
+function Choice(): ReactElement {
   return (
     <Layout>
       <h2>What kind of inception are you planning?</h2>
@@ -13,4 +13,4 @@ function InceptionChoice(): ReactElement {
   );
 }
 
-export default InceptionChoice;
+export default Choice;
