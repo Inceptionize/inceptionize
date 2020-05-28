@@ -3,6 +3,7 @@ import { render, cleanup, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import OutcomeChoice from "./OutcomeChoice";
 import Router from "next/router";
+import * as buttonLabels from "./constants";
 
 const pushed = jest.fn();
 const mockedRouter = {
@@ -21,15 +22,15 @@ describe("OutcomeChoice", () => {
   it("renders", () => {
     const { getByText } = render(<OutcomeChoice />);
 
-    expect(getByText("MVP")).toBeInTheDocument();
-    expect(getByText("Prototype")).toBeInTheDocument();
-    expect(getByText("Agile Team Setup")).toBeInTheDocument();
+    expect(getByText(buttonLabels.MVP)).toBeInTheDocument();
+    expect(getByText(buttonLabels.PROTOTYPE)).toBeInTheDocument();
+    expect(getByText(buttonLabels.AGILE_TEAM)).toBeInTheDocument();
   });
 
   it("redirect to lean inception page when MVP button clicked", async () => {
     const { getByText } = render(<OutcomeChoice />);
 
-    const MVPButton = getByText("MVP");
+    const MVPButton = getByText(buttonLabels.MVP);
 
     await fireEvent.click(MVPButton);
 
@@ -39,7 +40,7 @@ describe("OutcomeChoice", () => {
   it("redirect to design-sprint page when Prototype button clicked", async () => {
     const { getByText } = render(<OutcomeChoice />);
 
-    const PrototypeButton = getByText("Prototype");
+    const PrototypeButton = getByText(buttonLabels.PROTOTYPE);
 
     await fireEvent.click(PrototypeButton);
 
@@ -49,7 +50,7 @@ describe("OutcomeChoice", () => {
   it("redirect to agile-team page when Agile button clicked", async () => {
     const { getByText } = render(<OutcomeChoice />);
 
-    const AgileTeamButton = getByText("Agile Team Setup");
+    const AgileTeamButton = getByText(buttonLabels.AGILE_TEAM);
 
     await fireEvent.click(AgileTeamButton);
 
