@@ -9,6 +9,7 @@ function Choice(): ReactElement {
       <DecisionButton href="/lean-inception" text="Lean Inception" />
       <DecisionButton href="/design-sprint" text="Design Sprint" />
       <DecisionButton href="/agile-team" text="Agile Team" />
+      <DecisionButton href="/outcome" text="I don't know" />
     </Layout>
   );
 }

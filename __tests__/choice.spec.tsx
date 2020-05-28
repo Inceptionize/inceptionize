@@ -54,4 +54,14 @@ describe("InceptionChoice", () => {
 
     expect(pushed).toHaveBeenCalledWith("/agile-team");
   });
+
+  it("redirect to expected outcome page when idk button clicked", async () => {
+    const { getByText } = render(<InceptionChoice />);
+
+    const IdkButton = getByText("I don't know");
+
+    await fireEvent.click(IdkButton);
+
+    expect(pushed).toHaveBeenCalledWith("/outcome");
+  });
 });
