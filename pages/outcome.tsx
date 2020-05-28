@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
-import Layout from "../components/layout/Layout";
-import OutcomeChoice from "../components/outcome-choice/OutcomeChoice";
+import Layout from "../components/layout";
+import OutcomeChoice from "../components/outcome-choice";
 
 function Outcome(): ReactElement {
   return (

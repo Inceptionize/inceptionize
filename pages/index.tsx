@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import Layout from "../components/layout/Layout";
+import Layout from "../components/layout";
 
 function HomePage(): ReactElement {
   return (

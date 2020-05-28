@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import DecisionButton from "../decision-button/DecisionButton";
+import DecisionButton from "../decision-button";
 import * as buttonLabels from "./constants";
 
 function OutcomeChoice(): ReactElement {
