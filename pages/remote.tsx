@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
-import Layout from "../components/layout/Layout";
-import DecisionButton from "../components/decision-button/DecisionButton";
+import Layout from "../components/layout";
+import DecisionButton from "../components/decision-button";
 
 function Remote(): ReactElement {
   return (
