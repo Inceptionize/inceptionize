@@ -5,7 +5,6 @@ import DesignSprintContent from "../components/design-sprint-content";
 function DesignSprint(): ReactElement {
   return (
     <Layout>
-      <h2>Design Sprint page</h2>
       <DesignSprintContent />
     </Layout>
   );

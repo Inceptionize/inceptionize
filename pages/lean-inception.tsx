@@ -5,7 +5,6 @@ import LeanInceptionContent from "../components/lean-inception-content";
 function LeanInception(): ReactElement {
   return (
     <Layout>
-      <h2>Lean Inception</h2>
       <LeanInceptionContent />
     </Layout>
   );
