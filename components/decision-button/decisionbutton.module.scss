@@ -1,5 +1,7 @@
+@import "../../styles/variables.scss";
+
 .decisionButton {
-  background-color: #ef5ba1;
+  background-color: $link-color-pink;
   border: none;
   color: white;
   padding: 15px 32px;
