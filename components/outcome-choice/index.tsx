@@ -5,9 +5,9 @@ import * as buttonLabels from "./constants";
 function OutcomeChoice(): ReactElement {
   return (
     <div>
-      <DecisionButton href="/lean-inception" text={buttonLabels.MVP}></DecisionButton>
-      <DecisionButton href="/design-sprint" text={buttonLabels.PROTOTYPE}></DecisionButton>
-      <DecisionButton href="/agile-team" text={buttonLabels.AGILE_TEAM}></DecisionButton>
+      <DecisionButton href="/lean-inception" text={buttonLabels.MVP} />
+      <DecisionButton href="/design-sprint" text={buttonLabels.PROTOTYPE} />
+      <DecisionButton href="/agile-team" text={buttonLabels.AGILE_TEAM} />
     </div>
   );
 }
