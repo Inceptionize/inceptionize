@@ -5,7 +5,7 @@ function AgileTeamContent(): ReactElement {
   return (
     <div className={styles.content}>
       <h2>Agile Team</h2>
-      <p>Find out more about agile teams:</p>
+      <p>Find out more about setting up an agile team:</p>
       <a href="https://www.funretrospectives.com/defining-the-team-principles/">agile team setup</a>
     </div>
   );

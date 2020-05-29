@@ -48,7 +48,7 @@ describe("InceptionChoice", () => {
   it("redirect to agile-team page when button clicked", async () => {
     const { getByText } = render(<InceptionChoice />);
 
-    const AgileTeamButton = getByText("Agile Team");
+    const AgileTeamButton = getByText("Agile Team Setup");
 
     await fireEvent.click(AgileTeamButton);
 
