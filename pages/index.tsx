@@ -1,10 +1,11 @@
 import React, { ReactElement } from "react";
 import Layout from "../components/layout";
+import Home from "../components/home";
 
 function HomePage(): ReactElement {
   return (
     <Layout>
-      <h1>Inceptionize! Coming Soon...</h1>
+      <Home />
     </Layout>
   );
 }
