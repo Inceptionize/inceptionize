@@ -13,22 +13,35 @@ function RemoteChecklist(): ReactElement {
           The facilitator has sent the email outlining the Lean Inception agenda, the activities description, and the
           participants (stakeholders and active team members).
         </li>
-        <li>The facilitator has sent the email with more information about the facilitator role.</li>
-        <li>Travel arrangements have been sorted out.</li>
-        <li>Pre-order of required materials (Lean inception posters, flipchart, post-it, sharpie) have been made.</li>
-        <li>The facilitator has answered all received questions about the workshop, its intention and agenda.</li>
+        <li>
+          The facilitator has sent the email with more information about the facilitator role, in the remote settings.
+        </li>
+        <li> Remote tools access has been sorted out.</li>
+        <li>
+          Prepared the required remote artifacts (online board with the Lean inception template, communication channels,
+          online ice-breaks activities, template for consolidated material).
+        </li>
+        <li>
+          The facilitator has answered all received questions about the remote workshop, its intention and agenda.
+        </li>
       </ul>
 
       <h3>During the remote workshop</h3>
       <ul>
-        <li>The room has enough place (wall, table, rolling board, etc) to put the posters and post-its</li>
-        <li> The room has a projector or a TV for the participants to share something from their laptops</li>
-        <li> The room has a place (whiteboard, flipchart, etc) where the participates can write and draw diagrams.</li>
-        <li> The room has chairs for everyone (rolling preferably)</li>
         <li>
-          Coffee, water and food are freely available to the participants (brainstorming session are tiring breaks,
-          beverages and light food are highly recommended).
+          All participants are familiar with the remote tools (adding and moving virtual post-it, remote group
+          interactions, material consolidation)
         </li>
+        <li> The group stablishes the ground rules for the workshop</li>
+        <li>
+          The group defines the What-Ifs for their specific workshop (e.g. what is this tool goes down? What if the
+          facilitator loses connection?)
+        </li>
+        <li>
+          The online board has working areas where the participates can brainstorm before consolidating any specific
+          activity result (activity result artefact)
+        </li>
+        <li>Short breaks, long breaks (for having meals), stretching sessions and ice-breaks are part of the agenda</li>
       </ul>
     </div>
   );
