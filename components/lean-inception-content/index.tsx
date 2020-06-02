@@ -1,5 +1,6 @@
 import React, { ReactElement, useContext } from "react";
 import styles from "./leaninceptioncontent.module.scss";
+import RemoteContext from "../remote/remotecontext";
 
 function LeanInceptionContent(): ReactElement {
   const { isRemote } = useContext(RemoteContext);

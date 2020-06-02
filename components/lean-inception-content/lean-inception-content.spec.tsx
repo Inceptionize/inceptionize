@@ -2,15 +2,15 @@ import React from "react";
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import LeanInceptionContent from "./";
+import RemoteContext from "../remote/remotecontext";
 
 describe("LeanInceptionContent", () => {
-  const RemoteContext = React.createContext({ isRemote: false });
   afterEach(cleanup);
   afterEach(jest.resetAllMocks);
 
   it("renders on-premise checklist", () => {
     const { getByText } = render(
-      <RemoteContext.Provider value={{ isRemote: false }}>
+      <RemoteContext.Provider value={{ isRemote: false, setRemoteness: undefined }}>
         <LeanInceptionContent />
       </RemoteContext.Provider>
     );
@@ -20,7 +20,7 @@ describe("LeanInceptionContent", () => {
 
   it("renders remote checklist when remote context is true", () => {
     const { getByText } = render(
-      <RemoteContext.Provider value={{ isRemote: true }}>
+      <RemoteContext.Provider value={{ isRemote: true, setRemoteness: undefined }}>
         <LeanInceptionContent />
       </RemoteContext.Provider>
     );
