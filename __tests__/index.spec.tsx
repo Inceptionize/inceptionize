@@ -30,6 +30,6 @@ describe("HomePage", () => {
 
     await fireEvent.click(StartButton);
 
-    expect(pushed).toHaveBeenCalledWith("/choice");
+    expect(pushed).toHaveBeenCalledWith("/remote");
   });
 });

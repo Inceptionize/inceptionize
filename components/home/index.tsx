@@ -8,7 +8,7 @@ function Home(): ReactElement {
       <h2 className={styles.subheading}>
         Helping teams and individuals organize inceptions in the easiest way possible.
       </h2>
-      <DecisionButton href="/choice" text="Get started" />
+      <DecisionButton href="/remote" text="Get started" />
     </div>
   );
 }
