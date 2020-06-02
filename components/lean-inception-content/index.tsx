@@ -3,9 +3,12 @@ import styles from "./leaninceptioncontent.module.scss";
 import { AppContext } from "../context/app-context";
 import RemoteChecklist from "./remote-checklist";
 import OnPremiseChecklist from "./on-premise-checklist";
+import { selectRemoteStatus } from "../context/selector";
 
 function LeanInceptionContent(): ReactElement {
-  const { isRemote } = useContext(AppContext);
+  const { state } = useContext(AppContext);
+  const isRemote = selectRemoteStatus(state);
+
   return (
     <div className={styles.content}>
       <h2>Lean Inception</h2>

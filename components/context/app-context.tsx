@@ -1,36 +1,32 @@
-import React, { createContext, useReducer, ReactElement, ReactNode } from "react";
+import React, { createContext, useReducer, ReactElement, ReactNode, Dispatch } from "react";
+import { remoteStatusReducer, Action, RemoteStatusType } from "./reducers";
 
 interface AppProviderProps {
   children: ReactNode;
 }
 
-interface RemoteState {
-  isRemote: boolean;
-}
-
-type AppState = RemoteState;
-
-interface Action {
-  type: string;
-  payload: RemoteState;
-}
-
-const initialState = { isRemote: false };
-
-const reducer = (state: AppState, action: Action): AppState => {
-  switch (action.type) {
-    case "SET_REMOTE_STATUS":
-      return { ...state, isRemote: !state.isRemote };
-    default:
-      return state;
-  }
+export type AppState = {
+  remote: RemoteStatusType;
 };
 
-const AppContext = createContext(initialState);
+const initialState = {
+  remote: {
+    isRemote: false,
+  },
+};
+
+const AppContext = createContext<{ state: AppState; dispatch: Dispatch<Action> }>({
+  state: initialState,
+  dispatch: () => null,
+});
+
+const reducer = ({ remote }: AppState, action: Action): AppState => ({
+  remote: remoteStatusReducer(remote, action),
+});
 
 const AppContextProvider = ({ children }: AppProviderProps): ReactElement => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const value = { ...state, dispatch };
+  const value = { state, dispatch };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
