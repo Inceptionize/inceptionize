@@ -15,7 +15,7 @@ describe("LeanInceptionContent", () => {
       </RemoteContext.Provider>
     );
 
-    expect(getByText("On-premise checklist")).toBeInTheDocument();
+    expect(getByText("Pre-work for the workshop")).toBeInTheDocument();
   });
 
   it("renders remote checklist when remote context is true", () => {
@@ -25,6 +25,6 @@ describe("LeanInceptionContent", () => {
       </RemoteContext.Provider>
     );
 
-    expect(getByText("Remote checklist")).toBeInTheDocument();
+    expect(getByText("Pre-work for the remote workshop")).toBeInTheDocument();
   });
 });
