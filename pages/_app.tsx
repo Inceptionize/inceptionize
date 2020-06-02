@@ -1,14 +1,12 @@
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement } from "react";
 import { AppProps } from "next/app";
 import "../styles/global.scss";
-import RemoteContext from "../components/remote/remotecontext";
+import { AppContextProvider } from "../components/context/app-context";
 
 export default function App({ Component, pageProps }: AppProps): ReactElement {
-  const [isRemote, setRemoteness] = useState(false);
-
   return (
-    <RemoteContext.Provider value={{ isRemote, setRemoteness }}>
-      <Component {...pageProps} />
-    </RemoteContext.Provider>
+    <AppContextProvider>
+      <Component {...pageProps} />;
+    </AppContextProvider>
   );
 }

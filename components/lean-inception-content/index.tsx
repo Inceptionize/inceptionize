@@ -1,11 +1,11 @@
 import React, { ReactElement, useContext } from "react";
 import styles from "./leaninceptioncontent.module.scss";
-import RemoteContext from "../remote/remotecontext";
+import { AppContext } from "../context/app-context";
 import RemoteChecklist from "./remote-checklist";
 import OnPremiseChecklist from "./on-premise-checklist";
 
 function LeanInceptionContent(): ReactElement {
-  const { isRemote } = useContext(RemoteContext);
+  const { isRemote } = useContext(AppContext);
   return (
     <div className={styles.content}>
       <h2>Lean Inception</h2>

@@ -1,7 +1,7 @@
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
 import LeanInceptionContent from "./";
-import RemoteContext from "../remote/remotecontext";
+import { AppContext } from "../context/app-context";
 
 describe("LeanInceptionContent", () => {
   afterEach(cleanup);
@@ -9,9 +9,9 @@ describe("LeanInceptionContent", () => {
 
   it("renders on-premise checklist", () => {
     const { getByText } = render(
-      <RemoteContext.Provider value={{ isRemote: false, setRemoteness: undefined }}>
+      <AppContext.Provider value={{ isRemote: false }}>
         <LeanInceptionContent />
-      </RemoteContext.Provider>
+      </AppContext.Provider>
     );
 
     expect(getByText("Pre-work for the workshop")).toBeInTheDocument();
@@ -19,9 +19,9 @@ describe("LeanInceptionContent", () => {
 
   it("renders remote checklist when remote context is true", () => {
     const { getByText } = render(
-      <RemoteContext.Provider value={{ isRemote: true, setRemoteness: undefined }}>
+      <AppContext.Provider value={{ isRemote: true }}>
         <LeanInceptionContent />
-      </RemoteContext.Provider>
+      </AppContext.Provider>
     );
 
     expect(getByText("Pre-work for the remote workshop")).toBeInTheDocument();
