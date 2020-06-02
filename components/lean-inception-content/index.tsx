@@ -1,7 +1,8 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useContext } from "react";
 import styles from "./leaninceptioncontent.module.scss";
 
 function LeanInceptionContent(): ReactElement {
+  const { isRemote } = useContext(RemoteContext);
   return (
     <div className={styles.content}>
       <h2>Lean Inception</h2>
@@ -12,6 +13,8 @@ function LeanInceptionContent(): ReactElement {
       <a href="https://www.slideshare.net/paulocaroli/lean-inception-how-to-align-people-and-build-the-right-product">
         How to align people and build the right product
       </a>
+
+      <h3>{isRemote ? "Remote checklist" : "On-premise checklist"}</h3>
     </div>
   );
 }
