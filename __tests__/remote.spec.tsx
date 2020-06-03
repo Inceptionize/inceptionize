@@ -34,9 +34,9 @@ describe("Remote", () => {
         <Remote />
       </RemoteContext.Provider>
     );
-    const { getAllByText } = render(tree);
+    const { getByText } = render(tree);
 
-    const RemoteButton = getAllByText("Remote")[0];
+    const RemoteButton = getByText("Remote");
 
     await fireEvent.click(RemoteButton);
 
@@ -50,9 +50,9 @@ describe("Remote", () => {
         <Remote />
       </RemoteContext.Provider>
     );
-    const { getAllByText } = render(tree);
+    const { getByText } = render(tree);
 
-    const RemoteButton = getAllByText("On-premise")[0];
+    const RemoteButton = getByText("On-premise");
 
     await fireEvent.click(RemoteButton);
 
