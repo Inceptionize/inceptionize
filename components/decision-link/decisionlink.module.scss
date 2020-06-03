@@ -1,6 +1,6 @@
 @import "../../styles/variables.scss";
 
-.decisionButton {
+.decisionLink {
   background-color: $link-color-pink;
   color: white;
   padding: 15px 32px;
@@ -13,12 +13,12 @@
   height: 3.5em;
 }
 
-.decisionButton:hover {
+.decisionLink:hover {
   text-decoration: none
 }
 
 @media only screen and (max-width: 600px) {
-    .decisionButton {
+    .decisionLink {
       margin-top: 10px;
     }
   }

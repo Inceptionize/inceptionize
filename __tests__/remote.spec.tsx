@@ -2,6 +2,7 @@ import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
 import Remote from "../pages/remote";
 import Router from "next/router";
+import RemoteContext from "../components/remote/remotecontext";
 
 const pushed = jest.fn();
 const mockedRouter = {
@@ -26,7 +27,13 @@ describe("Remote", () => {
   });
 
   it("redirect to inception choice page when remote button clicked", async () => {
-    const { getByText } = render(<Remote />);
+    const setRemoteness = jest.fn();
+    const tree = (
+      <RemoteContext.Provider value={{ isRemote: false, setRemoteness }}>
+        <Remote />
+      </RemoteContext.Provider>
+    );
+    const { getByText } = render(tree);
 
     const RemoteButton = getByText("Remote");
 
@@ -36,12 +43,50 @@ describe("Remote", () => {
   });
 
   it("redirect to inception choice page when on-premise button clicked", async () => {
-    const { getByText } = render(<Remote />);
+    const setRemoteness = jest.fn();
+    const tree = (
+      <RemoteContext.Provider value={{ isRemote: false, setRemoteness }}>
+        <Remote />
+      </RemoteContext.Provider>
+    );
+    const { getByText } = render(tree);
 
     const RemoteButton = getByText("On-premise");
 
     await fireEvent.click(RemoteButton);
 
     expect(pushed).toHaveBeenCalledWith("/choice");
+  });
+
+  it("sets remote context to true when remote button is clicked", async () => {
+    const setRemoteness = jest.fn();
+    const tree = (
+      <RemoteContext.Provider value={{ isRemote: false, setRemoteness }}>
+        <Remote />
+      </RemoteContext.Provider>
+    );
+    const { getByText } = render(tree);
+
+    const RemoteButton = getByText("Remote");
+
+    await fireEvent.click(RemoteButton);
+
+    expect(setRemoteness).toBeCalled();
+  });
+
+  it("sets remote context to false when on-premise button is clicked", async () => {
+    const setRemoteness = jest.fn();
+    const tree = (
+      <RemoteContext.Provider value={{ isRemote: false, setRemoteness }}>
+        <Remote />
+      </RemoteContext.Provider>
+    );
+    const { getByText } = render(tree);
+
+    const RemoteButton = getByText("On-premise");
+
+    await fireEvent.click(RemoteButton);
+
+    expect(setRemoteness).toBeCalled();
   });
 });
