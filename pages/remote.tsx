@@ -1,6 +1,6 @@
 import React, { ReactElement, useContext } from "react";
 import Layout from "../components/layout";
-import DecisionButton from "../components/decision-button";
+import DecisionLink from "../components/decision-link";
 import RemoteContext from "../components/remote/remotecontext";
 
 function Remote(): ReactElement {
@@ -14,14 +14,14 @@ function Remote(): ReactElement {
           setRemoteness(true);
         }}
       >
-        <DecisionButton href="/choice" text="Remote" />
+        <DecisionLink href="/choice" text="Remote" />
       </button>
       <button
         onClick={(): void => {
           setRemoteness(false);
         }}
       >
-        <DecisionButton href="/choice" text="On-premise" />
+        <DecisionLink href="/choice" text="On-premise" />
       </button>
     </Layout>
   );

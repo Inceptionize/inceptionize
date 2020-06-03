@@ -1,13 +1,13 @@
 import React, { ReactElement } from "react";
-import DecisionButton from "../decision-button";
+import DecisionLink from "../decision-link";
 import * as buttonLabels from "./constants";
 
 function OutcomeChoice(): ReactElement {
   return (
     <div>
-      <DecisionButton href="/lean-inception" text={buttonLabels.MVP} />
-      <DecisionButton href="/design-sprint" text={buttonLabels.PROTOTYPE} />
-      <DecisionButton href="/agile-team" text={buttonLabels.AGILE_TEAM} />
+      <DecisionLink href="/lean-inception" text={buttonLabels.MVP} />
+      <DecisionLink href="/design-sprint" text={buttonLabels.PROTOTYPE} />
+      <DecisionLink href="/agile-team" text={buttonLabels.AGILE_TEAM} />
     </div>
   );
 }
