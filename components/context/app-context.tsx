@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, ReactElement, ReactNode, Dispatch, useEffect } from "react";
+import React, { createContext, useReducer, ReactElement, ReactNode, Dispatch } from "react";
 import { remoteStatusReducer, Action, RemoteStatusType } from "./reducers";
 
 interface AppProviderProps {
