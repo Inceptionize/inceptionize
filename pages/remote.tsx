@@ -9,16 +9,20 @@ function Remote(): ReactElement {
   return (
     <Layout>
       <h2>Is your inception remote or on-premise?</h2>
-      <div
-        onClick={(): any => {
+      <button
+        onClick={(): void => {
           setRemoteness(true);
         }}
       >
         <DecisionButton href="/choice" text="Remote" />
-      </div>
-      <div>
+      </button>
+      <button
+        onClick={(): void => {
+          setRemoteness(false);
+        }}
+      >
         <DecisionButton href="/choice" text="On-premise" />
-      </div>
+      </button>
     </Layout>
   );
 }
