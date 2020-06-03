@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, ReactElement, ReactNode, Dispatch } from "react";
+import React, { createContext, useReducer, ReactElement, ReactNode, Dispatch, useEffect } from "react";
 import { remoteStatusReducer, Action, RemoteStatusType } from "./reducers";
 
 interface AppProviderProps {
@@ -27,6 +27,11 @@ const reducer = ({ remote }: AppState, action: Action): AppState => ({
 const AppContextProvider = ({ children }: AppProviderProps): ReactElement => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const value = { state, dispatch };
+
+  //TODO can also do something like this for persisting state to local storage
+  // useEffect(() => {
+  //   persistState(state);
+  // }, [state]);
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
