@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import Download from "../../download";
 
 function OnPremiseChecklist(): ReactElement {
   return (
@@ -30,6 +31,7 @@ function OnPremiseChecklist(): ReactElement {
           beverages and light food are highly recommended).
         </li>
       </ul>
+      <Download href="/lean-inception-checklist.pdf" />
     </div>
   );
 }

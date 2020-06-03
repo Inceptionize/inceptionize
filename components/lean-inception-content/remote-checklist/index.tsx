@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import Download from "../../download";
 
 function RemoteChecklist(): ReactElement {
   return (
@@ -43,6 +44,7 @@ function RemoteChecklist(): ReactElement {
         </li>
         <li>Short breaks, long breaks (for having meals), stretching sessions and ice-breaks are part of the agenda</li>
       </ul>
+      <Download href="/remote-lean-inception-checklist.pdf" />
     </div>
   );
 }
