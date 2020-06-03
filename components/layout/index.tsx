@@ -11,6 +11,11 @@ function Layout({ children }: LayoutProps): ReactElement {
     <>
       <Head>
         <title>Inceptionize</title>
+        <meta
+          name="description"
+          content="An application that helps teams and individuals organize inceptions in the easiest way possible."
+        />
+
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
