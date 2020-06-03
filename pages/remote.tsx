@@ -1,7 +1,7 @@
 import React, { ReactElement, useContext } from "react";
 import Layout from "../components/layout";
-import DecisionLink from "../components/decision-link";
 import RemoteContext from "../components/remote/remotecontext";
+import DecisionButton from "../components/decision-button";
 
 function Remote(): ReactElement {
   const { setRemoteness } = useContext(RemoteContext);
@@ -9,20 +9,20 @@ function Remote(): ReactElement {
   return (
     <Layout>
       <h2>Is your inception remote or on-premise?</h2>
-      <button
+      <DecisionButton
+        href="/choice"
+        text="Remote"
         onClick={(): void => {
           setRemoteness(true);
         }}
-      >
-        <DecisionLink href="/choice" text="Remote" />
-      </button>
-      <button
+      />
+      <DecisionButton
+        href="/choice"
+        text="On-premise"
         onClick={(): void => {
           setRemoteness(false);
         }}
-      >
-        <DecisionLink href="/choice" text="On-premise" />
-      </button>
+      />
     </Layout>
   );
 }
