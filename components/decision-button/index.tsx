@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import DecisionLink from "../decision-link";
+import styles from "./decisionbutton.module.scss";
 
 interface LinkProps {
   href: string;
@@ -9,7 +10,7 @@ interface LinkProps {
 
 function DecisionButton({ href, text, onClick }: LinkProps): ReactElement {
   return (
-    <button onClick={onClick}>
+    <button className={styles.button} onClick={onClick}>
       <DecisionLink href={href} text={text} />
     </button>
   );
