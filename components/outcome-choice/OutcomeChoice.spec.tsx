@@ -1,6 +1,5 @@
 import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import OutcomeChoice from ".";
 import Router from "next/router";
 import * as buttonLabels from "./constants";
