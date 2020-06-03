@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
 
   return (
     <RemoteContext.Provider value={{ isRemote, setRemoteness }}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </RemoteContext.Provider>
   );
 }
