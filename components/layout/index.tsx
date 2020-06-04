@@ -30,6 +30,11 @@ function Layout({ children }: LayoutProps): ReactElement {
           </Link>
         </header>
         {children}
+        <footer>
+          <a href="/404">
+            WE <span>♥</span> FEEDBACK, SEND US YOURS.
+          </a>
+        </footer>
       </div>
     </>
   );
