@@ -6,9 +6,9 @@ interface DownloadProps {
   label?: string;
 }
 
-function Download({ href, label = "Download" }: DownloadProps): ReactElement {
+function Download({ href, label }: DownloadProps): ReactElement {
   return (
-    <div>
+    <div className={styles.container}>
       <a className={styles.download} href={href} download>
         <img src="/file-download.svg" alt="Download" />
         {label}
