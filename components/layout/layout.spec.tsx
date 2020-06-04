@@ -1,6 +1,6 @@
 import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
-import HomePage from "../pages/index";
+import Layout from "./";
 import Router from "next/router";
 
 const pushed = jest.fn();
@@ -13,17 +13,20 @@ const mockedRouter = {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 Router.router = mockedRouter as any;
 
-describe("HomePage", () => {
+describe("Layout", () => {
   afterEach(cleanup);
   afterEach(jest.resetAllMocks);
 
-  it("redirects to choice page when start button clicked ", async () => {
-    const { getByText } = render(<HomePage />);
+  describe("Header", () => {
+    it("redicts to Home page when clicked on header", async () => {
+      const dummyChildren = <></>;
+      const { getByText } = render(<Layout>{dummyChildren}</Layout>);
 
-    const StartButton = getByText("Get started");
+      const InceptionizeHeaderText = getByText("Inceptionize!");
 
-    await fireEvent.click(StartButton);
+      await fireEvent.click(InceptionizeHeaderText);
 
-    expect(pushed).toHaveBeenCalledWith("/remote");
+      expect(pushed).toHaveBeenCalledWith("/");
+    });
   });
 });
