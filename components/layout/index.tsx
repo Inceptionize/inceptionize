@@ -31,7 +31,7 @@ function Layout({ children }: LayoutProps): ReactElement {
         </header>
         {children}
         <footer>
-          <a href="/404">
+          <a href="https://forms.gle/13ZAJaZ6yQNrDGVb9">
             WE <span>♥</span> FEEDBACK, SEND US YOURS.
           </a>
         </footer>
