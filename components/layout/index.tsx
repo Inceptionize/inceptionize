@@ -29,10 +29,10 @@ function Layout({ children }: LayoutProps): ReactElement {
             </a>
           </Link>
         </header>
-        {children}
+        <div>{children}</div>
         <footer>
           <a href="https://forms.gle/13ZAJaZ6yQNrDGVb9">
-            WE <span>♥</span> FEEDBACK, SEND US YOURS.
+            WE <span>♥</span> FEEDBACK, SEND US YOURS
           </a>
         </footer>
       </div>
