@@ -7,40 +7,40 @@
   margin: 1rem auto 0;
   max-width: 56rem;
   padding: 0 1rem;
+}
 
-  header {
-    a {
+.header {
+  a {
+    color: $white;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.footer {
+  font-weight: 600;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  margin-top: auto;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  a {
+    color: $white;
+  }
+
+  a:hover {
+    color: $link-color-pink;
+    text-decoration: none;
+
+    span {
       color: $white;
-    }
-
-    a:hover {
-      text-decoration: none;
     }
   }
 
-  footer {
-    font-weight: 600;
-    height: 2.5rem;
-    margin-bottom: 1rem;
-    margin-top: auto;
-    padding: 20px;
-    position: relative;
-    text-align: center;
-    a {
-      color: $white;
-    }
-
-    a:hover {
-      color: $link-color-pink;
-      text-decoration: none;
-
-      span {
-        color: $white;
-      }
-    }
-
-    span {
-      color: $link-color-pink;
-    }
+  span {
+    color: $link-color-pink;
   }
 }

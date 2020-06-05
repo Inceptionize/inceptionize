@@ -22,7 +22,7 @@ function Layout({ children }: LayoutProps): ReactElement {
       </Head>
 
       <div className={styles.container}>
-        <header>
+        <header className={styles.header}>
           <Link href="/" passHref>
             <a>
               <h1>Inceptionize!</h1>
@@ -30,7 +30,7 @@ function Layout({ children }: LayoutProps): ReactElement {
           </Link>
         </header>
         <div>{children}</div>
-        <footer>
+        <footer className={styles.footer}>
           <a href="https://forms.gle/BhXymkZTPF5ayeXu6">
             WE <span>♥</span> FEEDBACK, SEND US YOURS
           </a>
