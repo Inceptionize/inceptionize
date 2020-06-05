@@ -1,10 +1,10 @@
 import React, { ReactElement, useContext } from "react";
 import Layout from "../components/layout";
-import RemoteContext from "../components/remote/remotecontext";
 import DecisionButton from "../components/decision-button";
+import { AppContext } from "../components/context/app-context";
 
 function Remote(): ReactElement {
-  const { setRemoteness } = useContext(RemoteContext);
+  const { dispatch } = useContext(AppContext);
 
   return (
     <Layout>
@@ -13,14 +13,14 @@ function Remote(): ReactElement {
         href="/choice"
         text="Remote"
         onClick={(): void => {
-          setRemoteness(true);
+          dispatch({ type: "SET_REMOTE_STATUS", payload: { isRemote: true } });
         }}
       />
       <DecisionButton
         href="/choice"
         text="On-premise"
         onClick={(): void => {
-          setRemoteness(false);
+          dispatch({ type: "SET_REMOTE_STATUS", payload: { isRemote: false } });
         }}
       />
     </Layout>

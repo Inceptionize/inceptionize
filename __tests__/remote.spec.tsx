@@ -2,7 +2,7 @@ import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
 import Remote from "../pages/remote";
 import Router from "next/router";
-import RemoteContext from "../components/remote/remotecontext";
+import { AppContext } from "../components/context/app-context";
 
 const pushed = jest.fn();
 const mockedRouter = {
@@ -27,11 +27,10 @@ describe("Remote", () => {
   });
 
   it("redirect to inception choice page when remote button clicked", async () => {
-    const setRemoteness = jest.fn();
     const tree = (
-      <RemoteContext.Provider value={{ isRemote: false, setRemoteness }}>
+      <AppContext.Provider value={{ state: { isRemote: false }, dispatch: jest.fn() }}>
         <Remote />
-      </RemoteContext.Provider>
+      </AppContext.Provider>
     );
     const { getByText } = render(tree);
 
@@ -43,11 +42,10 @@ describe("Remote", () => {
   });
 
   it("redirect to inception choice page when on-premise button clicked", async () => {
-    const setRemoteness = jest.fn();
     const tree = (
-      <RemoteContext.Provider value={{ isRemote: false, setRemoteness }}>
+      <AppContext.Provider value={{ state: { isRemote: false }, dispatch: jest.fn() }}>
         <Remote />
-      </RemoteContext.Provider>
+      </AppContext.Provider>
     );
     const { getByText } = render(tree);
 
@@ -61,9 +59,9 @@ describe("Remote", () => {
   it("sets remote context to true when remote button is clicked", async () => {
     const setRemoteness = jest.fn();
     const tree = (
-      <RemoteContext.Provider value={{ isRemote: false, setRemoteness }}>
+      <AppContext.Provider value={{ state: { isRemote: false }, dispatch: setRemoteness }}>
         <Remote />
-      </RemoteContext.Provider>
+      </AppContext.Provider>
     );
     const { getByText } = render(tree);
 
@@ -77,9 +75,9 @@ describe("Remote", () => {
   it("sets remote context to false when on-premise button is clicked", async () => {
     const setRemoteness = jest.fn();
     const tree = (
-      <RemoteContext.Provider value={{ isRemote: false, setRemoteness }}>
+      <AppContext.Provider value={{ state: { isRemote: false }, dispatch: setRemoteness }}>
         <Remote />
-      </RemoteContext.Provider>
+      </AppContext.Provider>
     );
     const { getByText } = render(tree);
 

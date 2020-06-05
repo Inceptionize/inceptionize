@@ -1,18 +1,16 @@
 import React, { createContext, useReducer, ReactElement, ReactNode, Dispatch } from "react";
-import { remoteStatusReducer, Action, RemoteStatusType } from "./reducers";
+import { remoteStatusReducer, Action } from "../../state/reducers";
 
 interface AppProviderProps {
   children: ReactNode;
 }
 
 export type AppState = {
-  remote: RemoteStatusType;
+  isRemote: boolean;
 };
 
 const initialState = {
-  remote: {
-    isRemote: false,
-  },
+  isRemote: false,
 };
 
 const AppContext = createContext<{ state: AppState; dispatch: Dispatch<Action> }>({
@@ -20,8 +18,8 @@ const AppContext = createContext<{ state: AppState; dispatch: Dispatch<Action> }
   dispatch: () => null,
 });
 
-const reducer = ({ remote }: AppState, action: Action): AppState => ({
-  remote: remoteStatusReducer(remote, action),
+const reducer = (state: AppState, action: Action): AppState => ({
+  ...remoteStatusReducer(state, action),
 });
 
 const AppContextProvider = ({ children }: AppProviderProps): ReactElement => {

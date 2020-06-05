@@ -3,7 +3,7 @@ import styles from "./leaninceptioncontent.module.scss";
 import { AppContext } from "../context/app-context";
 import RemoteChecklist from "./remote-checklist";
 import OnPremiseChecklist from "./on-premise-checklist";
-import { selectRemoteStatus } from "../context/selector";
+import { selectRemoteStatus } from "../../state/selector";
 
 function LeanInceptionContent(): ReactElement {
   const { state } = useContext(AppContext);

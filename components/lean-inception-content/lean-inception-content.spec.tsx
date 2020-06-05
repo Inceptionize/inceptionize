@@ -9,7 +9,7 @@ describe("LeanInceptionContent", () => {
 
   it("renders on-premise checklist", () => {
     const { getByText } = render(
-      <AppContext.Provider value={{ state: { remote: { isRemote: false } }, dispatch: jest.fn() }}>
+      <AppContext.Provider value={{ state: { isRemote: false }, dispatch: jest.fn() }}>
         <LeanInceptionContent />
       </AppContext.Provider>
     );
@@ -19,7 +19,7 @@ describe("LeanInceptionContent", () => {
 
   it("renders remote checklist when remote context is true", () => {
     const { getByText } = render(
-      <AppContext.Provider value={{ state: { remote: { isRemote: true } }, dispatch: jest.fn() }}>
+      <AppContext.Provider value={{ state: { isRemote: true }, dispatch: jest.fn() }}>
         <LeanInceptionContent />
       </AppContext.Provider>
     );
