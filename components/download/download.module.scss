@@ -1,14 +1,15 @@
 .container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
 
-    .download {
-        display: flex;
-        width: 13%;
-        justify-content: space-evenly;
-        img {
-            width: 25px;
-        }
+  .download {
+    display: flex;
+    justify-content: space-evenly;
+    width: 13%;
+
+    img {
+      width: 25px;
     }
+  }
 }

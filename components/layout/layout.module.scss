@@ -1,44 +1,46 @@
-@import "../../styles/variables.scss";
+@import "../../styles/variables";
 
 .container {
-    display: flex;
-    flex-direction: column;
-    max-width: 56rem;
-    height: 95%;
-    padding: 0 1rem;
-    margin: 1rem auto 0;
-    
-    header {
-        a {
-            color: white;
-        }
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+  margin: 1rem auto 0;
+  max-width: 56rem;
+  padding: 0 1rem;
 
-        a:hover {
-            text-decoration: none;
-        }
+  header {
+    a {
+      color: $white;
     }
 
-    footer {
-        margin-top: auto;
-        margin-bottom: 1rem;
-        position: relative;
-        padding: 20px;
-        font-weight: 600;
-        height: 2.5rem;
-        text-align: center;
-        
-        a {
-            color: white;
-        }
-        a:hover {
-            text-decoration: none;
-            color: $link-color-pink;
-            span {
-                color: white;
-            }
-        }
-        span {
-            color: $link-color-pink;
-        }
+    a:hover {
+      text-decoration: none;
     }
-   }
+  }
+
+  footer {
+    font-weight: 600;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: auto;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    a {
+      color: $white;
+    }
+
+    a:hover {
+      color: $link-color-pink;
+      text-decoration: none;
+
+      span {
+        color: $white;
+      }
+    }
+
+    span {
+      color: $link-color-pink;
+    }
+  }
+}
