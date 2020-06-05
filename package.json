@@ -29,10 +29,10 @@
     "identity-obj-proxy": "3.0.0",
     "jest": "26.0.1",
     "prettier": "2.0.5",
-    "sass": "^1.26.5",
-    "stylelint": "^13.6.0",
-    "stylelint-config-prettier": "^8.0.1",
-    "stylelint-prettier": "^1.1.2",
+    "sass": "1.26.5",
+    "stylelint": "13.6.0",
+    "stylelint-config-prettier": "8.0.1",
+    "stylelint-prettier": "1.1.2",
     "ts-jest": "26.0.0",
     "typescript": "3.9.3"
   }
