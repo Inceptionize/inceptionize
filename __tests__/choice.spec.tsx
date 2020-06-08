@@ -63,4 +63,16 @@ describe("InceptionChoice", () => {
 
     expect(pushed).toHaveBeenCalledWith("/outcome");
   });
+
+  describe("back button", () => {
+    it("redirects to the previous repote page", async () => {
+      const { getByAltText } = render(<InceptionChoice />);
+
+      const PreviousButton = getByAltText("Previous step");
+
+      await fireEvent.click(PreviousButton);
+
+      expect(pushed).toHaveBeenCalledWith("/remote");
+    });
+  });
 });

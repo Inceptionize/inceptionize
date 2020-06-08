@@ -1,0 +1,18 @@
+.container {
+    .previousstepid {
+        display: flex;
+        width: 30px;
+        margin-top: 15px
+    }
+    
+    .previousstepid:hover {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .previousstepid {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
