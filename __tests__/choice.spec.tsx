@@ -65,7 +65,7 @@ describe("InceptionChoice", () => {
   });
 
   describe("back button", () => {
-    it("redirects to the previous repote page", async () => {
+    it("redirects to the previous remote page", async () => {
       const { getByAltText } = render(<InceptionChoice />);
 
       const PreviousButton = getByAltText("Previous step");
