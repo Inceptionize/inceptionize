@@ -11,7 +11,7 @@ interface LinkProps {
 function DecisionLink({ href, text }: LinkProps): ReactElement {
   return (
     <div className={styles.column}>
-      <Link href={href} passHref>
+      <Link href={href}>
         <a className={styles.decisionLink}>{text}</a>
       </Link>
     </div>

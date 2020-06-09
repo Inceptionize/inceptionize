@@ -3,6 +3,7 @@ import React, { ReactElement, ReactNode } from "react";
 import Head from "next/head";
 import styles from "./layout.module.scss";
 import Link from "next/link";
+import { FEEDBACK_FORM_URL } from "../constants";
 
 interface LayoutProps {
   children: ReactNode;
@@ -31,7 +32,7 @@ function Layout({ children }: LayoutProps): ReactElement {
         </header>
         <div>{children}</div>
         <footer className={styles.footer}>
-          <a href="https://forms.gle/BhXymkZTPF5ayeXu6">
+          <a href={FEEDBACK_FORM_URL} target="_blank" rel="noreferrer">
             WE <span>♥</span> FEEDBACK, SEND US YOURS
           </a>
         </footer>

@@ -24,6 +24,7 @@ describe("OutcomeChoice", () => {
     expect(getByText(buttonLabels.MVP)).toBeInTheDocument();
     expect(getByText(buttonLabels.PROTOTYPE)).toBeInTheDocument();
     expect(getByText(buttonLabels.AGILE_TEAM)).toBeInTheDocument();
+    expect(getByText(buttonLabels.NONE_OF_THESE)).toBeInTheDocument();
   });
 
   it("redirect to lean inception page when MVP button clicked", async () => {
