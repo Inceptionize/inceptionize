@@ -15,7 +15,7 @@ function LeanInceptionContent(): ReactElement {
     <div className={styles.content}>
       <h2>Lean Inception</h2>
 
-      <IntroDescription>{texts.LEAN_INCEPTION_INTRO_TEXT}</IntroDescription>
+      <IntroDescription text={texts.LEAN_INCEPTION_INTRO_TEXT} />
 
       {isRemote ? <RemoteChecklist /> : <OnPremiseChecklist />}
 

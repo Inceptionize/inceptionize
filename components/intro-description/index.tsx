@@ -1,11 +1,11 @@
-import React, { ReactElement, ReactNode } from "react";
+import React, { ReactElement } from "react";
 
 interface IntroDescriptionProps {
-  children: ReactNode;
+  text: string;
 }
 
-function IntroDescription({ children }: IntroDescriptionProps): ReactElement {
-  return <div>{children}</div>;
+function IntroDescription({ text }: IntroDescriptionProps): ReactElement {
+  return <div>{text}</div>;
 }
 
 export default IntroDescription;

@@ -7,7 +7,7 @@ function DesignSprintContent(): ReactElement {
   return (
     <div className={styles.content}>
       <h2>Design Sprint</h2>
-      <IntroDescription>{texts.DESIGN_SPRINT_INTRO_TEXT}</IntroDescription>
+      <IntroDescription text={texts.DESIGN_SPRINT_INTRO_TEXT} />
 
       <p>Find out more about Design Sprint:</p>
       <a href="https://www.gv.com/sprint/">design sprint</a>
