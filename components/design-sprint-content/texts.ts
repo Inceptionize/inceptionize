@@ -1,0 +1,1 @@
+export const DESIGN_SPRINT_INTRO_TEXT = `Design Sprint, developed by Google Ventures, is a five-day process for answering critical business questions following the stages understand, ideate, decide, prototype and test.`;
