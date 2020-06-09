@@ -3,6 +3,8 @@ import styles from "./leaninceptioncontent.module.scss";
 import { AppContext } from "../context/app-context";
 import RemoteChecklist from "./remote-checklist";
 import OnPremiseChecklist from "./on-premise-checklist";
+import IntroDescription from "../intro-description";
+import * as texts from "./texts";
 import { selectRemoteStatus } from "../../state/selector";
 
 function LeanInceptionContent(): ReactElement {
@@ -12,6 +14,8 @@ function LeanInceptionContent(): ReactElement {
   return (
     <div className={styles.content}>
       <h2>Lean Inception</h2>
+
+      <IntroDescription>{texts.LEAN_INCEPTION_INTRO_TEXT}</IntroDescription>
 
       {isRemote ? <RemoteChecklist /> : <OnPremiseChecklist />}
 
