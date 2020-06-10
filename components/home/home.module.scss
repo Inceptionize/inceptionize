@@ -5,16 +5,20 @@
     max-width: fit-content;
     width: 100%;
 }
+
 .column {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
+
     h2 {
         font-weight: 500;
     }
-.decisionLink {
-    font-size: 18;
-    font-weight: 1000;
-}
   }
+
+@media (max-width: 600px) {
+    .row {
+        display: block;
+    }
+}

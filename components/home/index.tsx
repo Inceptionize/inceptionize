@@ -7,13 +7,13 @@ function Home(): ReactElement {
     <div className={styles.row}>
       <div className={styles.column}>
         <h2>
-          Hello{" "}
+          Hello!{" "}
           <span role="img" aria-label="hand waving">
             👋
           </span>
         </h2>
-        <h2>Helping teams and individuals organize inceptions in the easiest way possible.</h2>
-        <DecisionLink href="/remote" text="Get started" />
+        <h2>Inceptionize! will help you and your team organize inceptions in the easiest way possible.</h2>
+        <DecisionLink href="/remote" text="Let's get started!" />
       </div>
       <div className={styles.column}>
         <img src="/inceptionize.svg" alt="Inceptionize logo" />
