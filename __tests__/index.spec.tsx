@@ -20,7 +20,7 @@ describe("HomePage", () => {
   it("redirects to choice page when start button clicked ", async () => {
     const { getByText } = render(<HomePage />);
 
-    const StartButton = getByText("Get started");
+    const StartButton = getByText("Let's get started!");
 
     await fireEvent.click(StartButton);
 
