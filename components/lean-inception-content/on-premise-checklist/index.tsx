@@ -6,9 +6,9 @@ function OnPremiseChecklist(): ReactElement {
   return (
     <>
       <div className={styles.row}>
-        <h3>Before</h3>
+        <h3>Pre-work for the workshop</h3>
         <div className={styles.rowcontent}>
-          <h4>Send out email</h4>
+          <h4>Emails</h4>
           <ul>
             <li>
               <p>
@@ -19,11 +19,6 @@ function OnPremiseChecklist(): ReactElement {
             <li>
               <p>The facilitator has sent the email with more information about the facilitator role.</p>
             </li>
-          </ul>
-        </div>
-        <div className={styles.rowcontent}>
-          <h4>Agenda outline</h4>
-          <ul>
             <li>
               <p>
                 The facilitator has sent the email outlining the Lean Inception agenda, the activities description,
@@ -33,7 +28,7 @@ function OnPremiseChecklist(): ReactElement {
           </ul>
         </div>
         <div className={styles.rowcontent}>
-          <h4>Agenda outline</h4>
+          <h4>Logistics</h4>
           <ul>
             <li>
               <p>Travel arrangements have been sorted out.</p>
@@ -52,7 +47,7 @@ function OnPremiseChecklist(): ReactElement {
       <div className={styles.row}>
         <h3>During the workshop</h3>
         <div className={styles.rowcontent}>
-          <h4>Room logistics</h4>
+          <h4>Room</h4>
           <ul>
             <li>
               <p>The room has enough place (wall, table, rolling board, etc) to put the posters and post-its.</p>
