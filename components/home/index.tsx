@@ -1,8 +1,14 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useEffect } from "react";
 import DecisionLink from "../decision-link";
 import styles from "./home.module.scss";
+import ReactGA from "react-ga";
 
 function Home(): ReactElement {
+  const App_ID = "UA-169236210-1";
+  useEffect(() => {
+    ReactGA.initialize(App_ID);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
   return (
     <div className={styles.row}>
       <div className={styles.column}>
