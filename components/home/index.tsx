@@ -7,9 +7,8 @@ function Home(): ReactElement {
   const App_ID = "UA-169236210-1";
   useEffect(() => {
     ReactGA.initialize(App_ID);
+    ReactGA.pageview(window.location.pathname + window.location.search);
   });
-
-  ReactGA.pageview(window.location.pathname + window.location.search);
 
   return (
     <div className={styles.row}>
