@@ -3,6 +3,8 @@ import { render, cleanup, fireEvent } from "@testing-library/react";
 import Outcome from "../pages/outcome";
 import Router from "next/router";
 
+jest.mock("react-ga");
+
 const pushed = jest.fn();
 const mockedRouter = {
   push: (path: string): Promise<void> => {

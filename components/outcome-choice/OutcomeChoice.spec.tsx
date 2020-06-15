@@ -4,6 +4,8 @@ import OutcomeChoice from ".";
 import Router from "next/router";
 import * as buttonLabels from "./constants";
 
+jest.mock("react-ga");
+
 const pushed = jest.fn();
 const mockedRouter = {
   push: (path: string): Promise<void> => {

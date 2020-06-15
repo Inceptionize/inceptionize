@@ -4,13 +4,21 @@ import ExternalLink from "../external-link";
 import * as buttonLabels from "./constants";
 import { FEEDBACK_FORM_URL } from "../constants";
 import styles from "./outcomechoice.module.scss";
-import ReactGA from "react-ga";
+import { initGA, logPageView } from "../utils/google-analytics";
+
+declare global {
+  interface Window {
+    GA_INITIALIZED: boolean;
+  }
+}
 
 function OutcomeChoice(): ReactElement {
-  const App_ID = "UA-169236210-1";
   useEffect(() => {
-    ReactGA.initialize(App_ID);
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
   });
 
   return (

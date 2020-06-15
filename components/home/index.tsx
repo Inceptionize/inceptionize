@@ -1,11 +1,21 @@
 import React, { ReactElement, useEffect } from "react";
 import DecisionLink from "../decision-link";
 import styles from "./home.module.scss";
-import ReactGA from "react-ga";
+import { initGA, logPageView } from "../utils/google-analytics";
+
+declare global {
+  interface Window {
+    GA_INITIALIZED: boolean;
+  }
+}
 
 function Home(): ReactElement {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
   });
 
   return (
