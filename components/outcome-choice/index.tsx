@@ -7,7 +7,9 @@ import styles from "./outcomechoice.module.scss";
 import ReactGA from "react-ga";
 
 function OutcomeChoice(): ReactElement {
+  const App_ID = "UA-169236210-1";
   useEffect(() => {
+    ReactGA.initialize(App_ID);
     ReactGA.pageview(window.location.pathname + window.location.search);
   });
 
