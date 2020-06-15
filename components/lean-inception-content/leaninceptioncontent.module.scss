@@ -29,7 +29,7 @@
   flex-wrap: wrap;
   max-width: fit-content;
   width: 100%;
-  background-color: $dark-purple;
+  background-color: $dark-gray-50-opacity;
   margin-top: 30px;
   padding: 10px;
 
@@ -40,7 +40,7 @@
   .rowcontent {
     display: flex;
     flex-direction: column;
-    background-color: $light-purple;
+    background-color: $lighter-gray-50-opacity;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 30px;
