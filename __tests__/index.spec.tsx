@@ -19,6 +19,11 @@ describe("HomePage", () => {
   afterEach(cleanup);
   afterEach(jest.resetAllMocks);
 
+  it("initializes Google Analytics module", () => {
+    render(<HomePage />);
+    expect(window.GA_INITIALIZED).toBe(true);
+  });
+
   it("redirects to choice page when start button clicked ", async () => {
     const { getByText } = render(<HomePage />);
 
