@@ -4,9 +4,7 @@ import styles from "./home.module.scss";
 import ReactGA from "react-ga";
 
 function Home(): ReactElement {
-  const App_ID = "UA-169236210-1";
   useEffect(() => {
-    ReactGA.initialize(App_ID);
     ReactGA.pageview(window.location.pathname + window.location.search);
   });
 
