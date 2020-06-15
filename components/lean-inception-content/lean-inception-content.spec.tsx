@@ -3,6 +3,8 @@ import { render, cleanup } from "@testing-library/react";
 import LeanInceptionContent from "./";
 import { AppContext } from "../context/app-context";
 
+jest.mock("react-ga");
+
 describe("LeanInceptionContent", () => {
   afterEach(cleanup);
   afterEach(jest.resetAllMocks);
