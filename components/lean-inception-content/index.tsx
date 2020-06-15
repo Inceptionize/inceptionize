@@ -6,14 +6,23 @@ import OnPremiseChecklist from "./on-premise-checklist";
 import IntroDescription from "../intro-description";
 import * as texts from "./texts";
 import { selectRemoteStatus } from "../../state/selector";
-import { initGAPerComponent, logPageView } from "../utils/google-analytics";
+import { initGA, logPageView } from "../utils/google-analytics";
+
+declare global {
+  interface Window {
+    GA_INITIALIZED: boolean;
+  }
+}
 
 function LeanInceptionContent(): ReactElement {
   const { state } = useContext(AppContext);
   const isRemote = selectRemoteStatus(state);
 
   useEffect(() => {
-    initGAPerComponent();
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
     logPageView();
   });
 
