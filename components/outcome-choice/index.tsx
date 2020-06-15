@@ -1,11 +1,16 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useEffect } from "react";
 import DecisionLink from "../decision-link";
 import ExternalLink from "../external-link";
 import * as buttonLabels from "./constants";
 import { FEEDBACK_FORM_URL } from "../constants";
 import styles from "./outcomechoice.module.scss";
+import ReactGA from "react-ga";
 
 function OutcomeChoice(): ReactElement {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  });
+
   return (
     <div className={styles.row}>
       <DecisionLink href="/lean-inception" text={buttonLabels.MVP} />
