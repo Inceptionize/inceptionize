@@ -4,6 +4,7 @@ import LeanInceptionContent from "./";
 import { AppContext } from "../context/app-context";
 import  Router  from "next/router";
 
+jest.mock("react-ga");
 const pushed = jest.fn();
 const mockedRouter = {
   push: (path: string): Promise<void> => {
