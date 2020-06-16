@@ -25,6 +25,11 @@ describe("Outcome", () => {
     expect(getByText("What outcome do you expect from the inception?")).toBeInTheDocument();
   });
 
+  it("initializes Google Analytics module", () => {
+    render(<Outcome />);
+    expect(window.GA_INITIALIZED).toBe(true);
+  });
+
   describe("back button", () => {
     it("redirects to the previous choice page", async () => {
       const { getByAltText } = render(<Outcome />);
