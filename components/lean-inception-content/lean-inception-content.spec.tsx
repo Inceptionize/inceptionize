@@ -2,7 +2,7 @@ import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
 import LeanInceptionContent from "./";
 import { AppContext } from "../context/app-context";
-import  Router  from "next/router";
+import Router from "next/router";
 
 jest.mock("react-ga");
 const pushed = jest.fn();

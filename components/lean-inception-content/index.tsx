@@ -32,13 +32,13 @@ function LeanInceptionContent(): ReactElement {
 
       <IntroDescription text={texts.LEAN_INCEPTION_INTRO_TEXT} />
       <div className={styles.agenda}>
-      <DecisionButton
-        href="/coming-soon"
-        text="Create Agenda"
-        onClick={(): void => {
-          logEvent("User","createdAgenda");
-        }}
-      />
+        <DecisionButton
+          href="/coming-soon"
+          text="Create Agenda"
+          onClick={(): void => {
+            logEvent("User", "createdAgenda");
+          }}
+        />
       </div>
       {isRemote ? <RemoteChecklist /> : <OnPremiseChecklist />}
 
