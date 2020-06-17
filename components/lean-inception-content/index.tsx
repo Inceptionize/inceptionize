@@ -7,7 +7,7 @@ import IntroDescription from "../intro-description";
 import * as texts from "./texts";
 import { selectRemoteStatus } from "../../state/selector";
 import { initGA, logEvent } from "../utils/google-analytics";
-import DecisionButton from "../decision-button";
+import AgendaButton from "./agenda-button";
 
 declare global {
   interface Window {
@@ -31,15 +31,13 @@ function LeanInceptionContent(): ReactElement {
       <h2>Lean Inception</h2>
 
       <IntroDescription text={texts.LEAN_INCEPTION_INTRO_TEXT} />
-      <div className={styles.agenda}>
-        <DecisionButton
-          href="/coming-soon"
-          text="Create Agenda"
-          onClick={(): void => {
-            logEvent("User", "createdAgenda");
-          }}
-        />
-      </div>
+
+      <AgendaButton
+        onClick={(): void => {
+          logEvent("User", "createdAgenda");
+        }}
+      />
+
       {isRemote ? <RemoteChecklist /> : <OnPremiseChecklist />}
 
       <div className={styles.links}>
