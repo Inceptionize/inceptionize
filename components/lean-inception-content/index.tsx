@@ -8,6 +8,8 @@ import * as texts from "./texts";
 import { selectRemoteStatus } from "../../state/selector";
 import { initGA, logEvent } from "../utils/google-analytics";
 import AgendaButton from "./agenda-button";
+import RemoteAdditionalLinks from "./remote-additional-links";
+import OnPremiseAdditionalLinks from "./on-premise-additional-links";
 
 declare global {
   interface Window {
@@ -42,12 +44,7 @@ function LeanInceptionContent(): ReactElement {
 
       <div className={styles.links}>
         <h3>Additional links</h3>
-        <a href="https://www.caroli.org/en/book/lean-inception-how-to-align-people-and-build-the-right-product/">
-          caroli.org
-        </a>
-        <a href="https://www.slideshare.net/paulocaroli/lean-inception-how-to-align-people-and-build-the-right-product">
-          How to align people and build the right product
-        </a>
+        {isRemote ? <RemoteAdditionalLinks /> : <OnPremiseAdditionalLinks />}
       </div>
     </div>
   );
