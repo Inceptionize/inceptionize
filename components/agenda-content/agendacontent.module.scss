@@ -1,0 +1,19 @@
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.agendaimage {
+    img {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .agendaimage {
+        img {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+  }
