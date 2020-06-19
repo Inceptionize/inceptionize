@@ -12,21 +12,17 @@ function RemoteChecklist(): ReactElement {
           <ul>
             <li>
               <p>
-                The facilitator has sent the email (to all participants – stakeholders and active team members)
-                explaining the Lean Inception.
+                Send an email to all participants, stakeholders and active team members, explaining the Lean Inception.
               </p>
             </li>
             <li>
               <p>
-                The facilitator has sent the email outlining the Lean Inception agenda, the activities description, and
-                the participants (stakeholders and active team members).
+                Send an email outlining the Lean Inception agenda, the activities description, participants
+                (stakeholders and active team members).
               </p>
             </li>
             <li>
-              <p>
-                The facilitator has sent the email with more information about the facilitator role, in the remote
-                settings.
-              </p>
+              <p>Send an email with additional information about the facilitator role, in the remote setting.</p>
             </li>
           </ul>
         </div>
@@ -34,18 +30,16 @@ function RemoteChecklist(): ReactElement {
           <h4>Remote Logistics</h4>
           <ul>
             <li>
-              <p> Remote tools access has been sorted out.</p>
+              <p>Sort out access to remote tools.</p>
             </li>
             <li>
               <p>
-                Prepared the required remote artifacts (online board with the Lean inception template, communication
+                Prepare required remote artifacts (online board with the Lean inception template, communication
                 channels, online ice-breaks activities, template for consolidated material).
               </p>
             </li>
             <li>
-              <p>
-                The facilitator has answered all received questions about the remote workshop, its intention and agenda.
-              </p>
+              <p>Answer all received questions about the remote workshop, its intention, and agenda.</p>
             </li>
           </ul>
         </div>
@@ -58,12 +52,12 @@ function RemoteChecklist(): ReactElement {
           <ul>
             <li>
               <p>
-                All participants are familiar with the remote tools (adding and moving virtual post-it, remote group
-                interactions, material consolidation).
+                All participants are familiar with the remote tools (adding and moving virtual post-its, remote group
+                interactions, and material consolidation).
               </p>
             </li>
             <li>
-              <p>The group stablishes the ground rules for the workshop.</p>
+              <p>The group establishes the ground rules for the workshop.</p>
             </li>
             <li>
               <p>
@@ -79,7 +73,8 @@ function RemoteChecklist(): ReactElement {
             </li>
             <li>
               <p>
-                Short breaks, long breaks (for having meals), stretching sessions and ice-breaks are part of the agenda.
+                The group decides on short breaks, long breaks (for having meals), stretching sessions, and whether
+                ice-breakers are part of the agenda.
               </p>
             </li>
           </ul>
