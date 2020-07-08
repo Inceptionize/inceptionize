@@ -9,7 +9,7 @@ interface AgendaButtonProps {
 function AgendaButton({ onClick }: AgendaButtonProps): ReactElement {
   return (
     <div className={styles.agenda}>
-      <DecisionButton href="/coming-soon" text="Create Agenda" onClick={onClick} />
+      <DecisionButton href="/agenda" text="Create Agenda" onClick={onClick} />
     </div>
   );
 }

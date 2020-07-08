@@ -50,6 +50,6 @@ describe("LeanInceptionContent", () => {
 
     await fireEvent.click(AgendaButton);
 
-    expect(pushed).toHaveBeenCalledWith("/coming-soon");
+    expect(pushed).toHaveBeenCalledWith("/agenda");
   });
 });

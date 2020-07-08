@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import Layout from "../components/layout";
 import AgendaContent from "../components/agenda-content";
 
-function ComingSoon(): ReactElement {
+function Agenda(): ReactElement {
   return (
     <Layout>
       <AgendaContent />
@@ -10,4 +10,4 @@ function ComingSoon(): ReactElement {
   );
 }
 
-export default ComingSoon;
+export default Agenda;
