@@ -5,12 +5,20 @@ interface AppProviderProps {
   children: ReactNode;
 }
 
+export type Toggles = {
+  isActivitiesVisible: boolean;
+};
+
 export type AppState = {
   isRemote: boolean;
+  toggles?: Toggles;
 };
 
 const initialState = {
   isRemote: false,
+  toggles: {
+    isActivitiesVisible: false,
+  },
 };
 
 const AppContext = createContext<{ state: AppState; dispatch: Dispatch<Action> }>({
