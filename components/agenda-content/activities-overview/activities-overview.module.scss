@@ -12,8 +12,10 @@
   border: 1px solid #ccc;
   padding: 10px;
   height: 110px;
+  max-height: 110px;
   max-width: 200px;
   background: $dark-gray-50-opacity;
+  transition: max-height .5s;
   h3 {
     margin: 0;
   }
@@ -29,9 +31,10 @@
 
 .card:hover {
   height: auto;
+  max-height: 400px;
+  overflow: hidden;
   p {
-    overflow: visible;
-    width: auto;
     white-space: normal;
   }
 }
+
