@@ -1,0 +1,37 @@
+@import "../../../styles/variables";
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.card {
+  flex: 0 0 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 110px;
+  max-width: 200px;
+  background: $dark-gray-50-opacity;
+  h3 {
+    margin: 0;
+  }
+  p {
+    font-size: 15px;
+    width: 180px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.card:hover {
+  height: auto;
+  p {
+    overflow: visible;
+    width: auto;
+    white-space: normal;
+  }
+}
