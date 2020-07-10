@@ -1,10 +1,13 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { ReactElement } from "react";
 import styles from "./activities-overview.module.scss";
 
 function ActivitiesOverview(): ReactElement {
   return (
     <div>
-      <h2><strong>Lean Inception Activities</strong></h2>
+      <h2>
+        <strong>Lean Inception Activities</strong>
+      </h2>
       <div data-testid="activities-overview" className={styles.cards}>
         <div className={styles.card}>
           <h3>Introductions</h3>
