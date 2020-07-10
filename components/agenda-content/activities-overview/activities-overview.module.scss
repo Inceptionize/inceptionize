@@ -16,6 +16,7 @@
   max-width: 200px;
   background: $dark-gray-50-opacity;
   transition: max-height .5s;
+  overflow: hidden;
   h3 {
     margin: 0;
   }
