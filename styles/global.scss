@@ -48,3 +48,23 @@ h2 {
     text-align: center;
   }
 }
+
+.rbc-off-range-bg {
+  background: $dark-gray-50-opacity;
+}
+
+.rbc-today {
+  background-color: $lighter-gray-50-opacity;
+}
+
+.rbc-toolbar {
+  button {
+    color: white;
+  }
+}
+
+.rbc-day-slot {
+  .rbc-time-slot {
+    border-top: $dark-gray-50-opacity;
+  }
+}
