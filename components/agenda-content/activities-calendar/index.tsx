@@ -2,6 +2,8 @@ import React, { ReactElement } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import styles from "./activitiescalendar.module.scss";
+import events from "./events";
+import dateHelpers from "../date-helpers/date-helpers";
 
 const localizer = momentLocalizer(moment);
 
@@ -10,7 +12,7 @@ function ActivitiesCalendar(): ReactElement {
     <div className={styles.container}>
       <Calendar
         localizer={localizer}
-        events={[]}
+        events={events.getEvents(dateHelpers.getNextMonday(moment()))}
         views={{ month: true, week: true }}
         startAccessor="start"
         endAccessor="end"
