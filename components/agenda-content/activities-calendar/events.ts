@@ -1,18 +1,43 @@
-import moment from 'moment';
+export interface EventConfig {
+  title: string;
+  desc: string;
+  day: number;
+  start: number;
+  end: number;
+}
+
+export interface CalendarEvent {
+  id: number;
+  title: string;
+  desc: string;
+  start: Date;
+  end: Date;
+}
 
 export default {
-    getEvents: function (date: moment.Moment) {
-        const start = date.clone().add(10, 'hours');
-        const end = date.clone().add(12, 'hours');
-
-        return [
-            {
-                id: 1,
-                title: 'Meeting',
-                start: start.toDate(),
-                end: end.toDate(),
-                desc: 'Pre-meeting meeting, to prepare for the meeting',
-            },
-        ]
-    }
+  getEvents: (): EventConfig[] => {
+    return [
+      {
+        title: "Meeting",
+        day: 1,
+        start: 10,
+        end: 12,
+        desc: "Pre-meeting meeting, to prepare for the meeting",
+      },
+      {
+        title: "Meeting",
+        day: 1,
+        start: 13,
+        end: 16,
+        desc: "Pre-meeting meeting, to prepare for the meeting",
+      },
+      {
+        title: "Meeting",
+        day: 2,
+        start: 10,
+        end: 12,
+        desc: "Pre-meeting meeting, to prepare for the meeting",
+      },
+    ];
+  },
 };

@@ -12,7 +12,7 @@ function ActivitiesCalendar(): ReactElement {
     <div className={styles.container}>
       <Calendar
         localizer={localizer}
-        events={events.getEvents(dateHelpers.getNextMonday(moment()))}
+        events={events.getEvents().map((x) => dateHelpers.convertEvent(dateHelpers.getNextMonday(moment()), x))}
         views={{ month: true, week: true }}
         startAccessor="start"
         endAccessor="end"
