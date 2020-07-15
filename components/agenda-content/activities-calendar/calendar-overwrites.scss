@@ -17,3 +17,11 @@
     border-top: $dark-gray-50-opacity;
   }
 }
+
+.rbc-event {
+  background-color: $link-color-pink;
+
+  &.rbc-selected {
+    background-color: darken($link-color-pink, 20%);
+  }
+}
