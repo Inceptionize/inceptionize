@@ -16,9 +16,10 @@ function AgendaContent(): ReactElement {
       <div className={styles.agendaimage}>
         <img src="/lean-inception-agenda.png" alt="Lean Inception Agenda" />
       </div>
-      {isActivitiesVisible ? <ActivitiesOverview /> : null}
 
       {isActivitiesVisible ? <ActivitiesCalendar /> : null}
+
+      {isActivitiesVisible ? <ActivitiesOverview /> : null}
 
       <PreviousStep href="/lean-inception" />
     </div>
