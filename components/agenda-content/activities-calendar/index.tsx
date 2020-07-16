@@ -13,9 +13,11 @@ function ActivitiesCalendar(): ReactElement {
       <Calendar
         localizer={localizer}
         events={events.map((x) => dateHelpers.convertEvent(dateHelpers.getNextMonday(moment()), x))}
-        views={{ month: true, week: true }}
+        defaultView={"week"}
+        views={{ month: true, week: true, agenda: true }}
         startAccessor="start"
         endAccessor="end"
+        defaultDate={dateHelpers.getNextMonday(moment()).toDate()}
       />
     </div>
   );
