@@ -52,4 +52,14 @@ describe("LeanInceptionContent", () => {
 
     expect(pushed).toHaveBeenCalledWith("/agenda");
   });
+
+  it("renders activities description", () => {
+    const { queryAllByTestId } = render(
+      <AppContext.Provider value={{ state: { isRemote: false }, dispatch: jest.fn() }}>
+        <LeanInceptionContent />
+      </AppContext.Provider>
+    );
+
+    expect(queryAllByTestId("activities-overview").length).toBe(1);
+  });
 });

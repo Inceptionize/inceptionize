@@ -13,7 +13,7 @@ function ActivitiesCalendar(): ReactElement {
   const todayEndOfDay: Date = new Date();
   todayEndOfDay.setHours(18, 0, 0, 0);
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="calendar">
       <Calendar
         localizer={localizer}
         events={events.map((x) => dateHelpers.convertEvent(dateHelpers.getNextMonday(moment()), x))}

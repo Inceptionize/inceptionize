@@ -6,9 +6,9 @@ describe("AgendaContent", () => {
   afterEach(cleanup);
   afterEach(jest.resetAllMocks);
 
-  it("renders activities description", () => {
-    const { queryAllByTestId } = render(<AgendaContent />);
+  it("renders a calendar", () => {
+    const { getByText } = render(<AgendaContent />);
 
-    expect(queryAllByTestId("activities-overview").length).toBe(1);
+    expect(getByText("Kick-off")).toHaveTextContent("Kick-off");
   });
 });
