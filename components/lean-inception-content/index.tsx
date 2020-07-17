@@ -10,6 +10,7 @@ import { initGA, logEvent } from "../utils/google-analytics";
 import AgendaButton from "./agenda-button";
 import RemoteAdditionalLinks from "./remote-additional-links";
 import OnPremiseAdditionalLinks from "./on-premise-additional-links";
+import ActivitiesOverview from "../activities-overview";
 
 declare global {
   interface Window {
@@ -41,6 +42,8 @@ function LeanInceptionContent(): ReactElement {
       />
 
       {isRemote ? <RemoteChecklist /> : <OnPremiseChecklist />}
+
+      <ActivitiesOverview />
 
       <div className={styles.links}>
         <h3>Additional links</h3>
