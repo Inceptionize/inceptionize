@@ -58,7 +58,7 @@ export default [
     goals. The way that we normally use to represent these users is through personas.`,
   },
   {
-    title: "User journeys",
+    title: "User Journeys",
     day: 3,
     start: 9,
     end: 12,
@@ -84,7 +84,7 @@ export default [
     desire for each feature, as well as the effort and perceived value associated with it.`,
   },
   {
-    title: "Feature sequencer",
+    title: "Feature Sequencer",
     day: 4,
     start: 13,
     end: 16,

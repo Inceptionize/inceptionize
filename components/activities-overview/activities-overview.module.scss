@@ -7,35 +7,51 @@
 }
 
 .card {
+  display: flex;
   flex: 0 0 200px;
   margin: 10px;
   border: 1px solid #ccc;
   padding: 10px;
   height: 110px;
-  max-height: 110px;
   max-width: 200px;
   background: $dark-gray-50-opacity;
-  transition: max-height .5s;
-  overflow: hidden;
+
+  justify-content: space-between;
+
   h3 {
     margin: 0;
+    text-align: center;
+    width: 100%;
   }
-  p {
-    font-size: 15px;
-    width: 180px;
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-}
 
-.card:hover {
-  height: auto;
-  max-height: 400px;
-  overflow: hidden;
-  p {
-    white-space: normal;
+  a {
+    background-color: $link-color-pink;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9em;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    min-width: 20px;
+    margin-top: 5px;
+    
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
+
+  .information {
+    width: 400px;
+    background: $information-tooltip-gray;
+    font-size: 15px;
+    opacity: 1 !important;
+  }
+  
+
+
+ 
+  
 }
 

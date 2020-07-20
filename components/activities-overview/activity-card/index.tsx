@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/no-unescaped-entities */
 import React, { ReactElement } from "react";
 import styles from "../activities-overview.module.scss";
+import ReactTooltip from "react-tooltip";
 
 interface ActivityCardProps {
   title: string;
@@ -11,7 +13,10 @@ function ActivityCard({ title, description }: ActivityCardProps): ReactElement {
   return (
     <div className={styles.card}>
       <h3>{title}</h3>
-      <p>{description}</p>
+      <a data-tip={description} data-event="click focus">
+        i
+      </a>
+      <ReactTooltip globalEventOff="click" className={styles.information}></ReactTooltip>
     </div>
   );
 }
