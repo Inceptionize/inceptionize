@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react/no-unescaped-entities */
 import React, { ReactElement } from "react";
 import styles from "../activities-overview.module.scss";
 import ReactTooltip from "react-tooltip";
