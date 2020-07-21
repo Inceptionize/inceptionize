@@ -31,3 +31,7 @@ The TravisCI build is available [here](https://travis-ci.com/github/Inceptionize
 ### Accessing the application
 
 The application is running on Netlify, available [here](https://inceptionize.netlify.app/).
+
+### Using external libraries
+
+For visualising the agenda, we used [Big Calendar](https://github.com/jquense/react-big-calendar) library. For tooltips on inception activities, we used [React Tooltip](https://wwayne.github.io/react-tooltip/) library.
