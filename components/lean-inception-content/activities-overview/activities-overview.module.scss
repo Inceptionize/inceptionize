@@ -17,6 +17,17 @@
   background: $dark-gray-50-opacity;
 
   justify-content: space-between;
+  .activityCardTitle {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    display: flex;
+    cursor: pointer;
+    margin: 0 auto;
+    height: max-content;
+  }
 
   h3 {
     margin: 0;
@@ -35,7 +46,6 @@
     text-align: center;
     min-width: 20px;
     margin-top: 5px;
-    
     &:hover {
       text-decoration: none;
       cursor: pointer;
