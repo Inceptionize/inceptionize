@@ -2,7 +2,7 @@
 import React, { ReactElement } from "react";
 import styles from "./activities-overview.module.scss";
 import ActivityCard from "./activity-card";
-import events, { EventConfig } from "../agenda-content/activities-calendar/events";
+import events, { EventConfig } from "../../agenda-content/activities-calendar/events";
 
 function ActivitiesOverview(): ReactElement {
   return (
