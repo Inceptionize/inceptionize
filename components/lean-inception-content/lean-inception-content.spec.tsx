@@ -21,7 +21,12 @@ describe("LeanInceptionContent", () => {
 
   it("renders on-premise checklist", () => {
     const { getByText } = render(
-      <AppContext.Provider value={{ state: { isRemote: false }, dispatch: jest.fn() }}>
+      <AppContext.Provider
+        value={{
+          state: { isRemote: false, toggles: { isModalVisible: false } },
+          dispatch: jest.fn(),
+        }}
+      >
         <LeanInceptionContent />
       </AppContext.Provider>
     );
@@ -31,7 +36,12 @@ describe("LeanInceptionContent", () => {
 
   it("renders remote checklist when remote context is true", () => {
     const { getByText } = render(
-      <AppContext.Provider value={{ state: { isRemote: true }, dispatch: jest.fn() }}>
+      <AppContext.Provider
+        value={{
+          state: { isRemote: true, toggles: { isModalVisible: false } },
+          dispatch: jest.fn(),
+        }}
+      >
         <LeanInceptionContent />
       </AppContext.Provider>
     );
@@ -41,7 +51,12 @@ describe("LeanInceptionContent", () => {
 
   it("redirect to coming soon page when create agenda button clicked", async () => {
     const { getByText } = render(
-      <AppContext.Provider value={{ state: { isRemote: false }, dispatch: jest.fn() }}>
+      <AppContext.Provider
+        value={{
+          state: { isRemote: false, toggles: { isModalVisible: false } },
+          dispatch: jest.fn(),
+        }}
+      >
         <LeanInceptionContent />
       </AppContext.Provider>
     );
@@ -55,7 +70,12 @@ describe("LeanInceptionContent", () => {
 
   it("renders activities description", () => {
     const { queryAllByTestId } = render(
-      <AppContext.Provider value={{ state: { isRemote: false }, dispatch: jest.fn() }}>
+      <AppContext.Provider
+        value={{
+          state: { isRemote: false, toggles: { isModalVisible: false } },
+          dispatch: jest.fn(),
+        }}
+      >
         <LeanInceptionContent />
       </AppContext.Provider>
     );
