@@ -1,1 +1,1 @@
-export const ACTIVITIES_TOGGLE = false;
+export const MODAL_TOGGLE = false;

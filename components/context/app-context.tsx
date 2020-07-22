@@ -1,13 +1,13 @@
 import React, { createContext, useReducer, ReactElement, ReactNode, Dispatch } from "react";
 import { remoteStatusReducer, Action } from "../../state/reducers";
-import { ACTIVITIES_TOGGLE } from "../../feature-toggles/feature-toggles";
+import { MODAL_TOGGLE } from "../../feature-toggles/feature-toggles";
 
 interface AppProviderProps {
   children: ReactNode;
 }
 
 export type Toggles = {
-  isActivitiesVisible: boolean;
+  isModalVisible: boolean;
 };
 
 export type AppState = {
@@ -18,7 +18,7 @@ export type AppState = {
 const initialState = {
   isRemote: false,
   toggles: {
-    isActivitiesVisible: ACTIVITIES_TOGGLE,
+    isModalVisible: MODAL_TOGGLE,
   },
 };
 
