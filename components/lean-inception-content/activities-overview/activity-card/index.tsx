@@ -30,27 +30,31 @@ function ActivityCard({ title, description }: ActivityCardProps): ReactElement {
 
   return (
     <div className={styles.card}>
-      <button onClick={openModal} className={styles.activityCardTitle}>
-        <h3>{title}</h3>
-      </button>
       {isModalVisible ? (
-        <Modal
-          isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
-          onRequestClose={closeModal}
-          contentLabel="Example Modal"
-        >
-          <button onClick={closeModal}>close</button>
-          <div>I am a modal</div>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
-        </Modal>
-      ) : null}
+        <>
+          <button onClick={openModal} className={styles.activityCardTitle}>
+            <h3>{title}</h3>
+          </button>
+          <Modal
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            contentLabel="Example Modal"
+          >
+            <button onClick={closeModal}>close</button>
+            <div>I am a modal</div>
+            <form>
+              <input />
+              <button>tab navigation</button>
+              <button>stays</button>
+              <button>inside</button>
+              <button>the modal</button>
+            </form>
+          </Modal>
+        </>
+      ) : (
+        <h3>{title}</h3>
+      )}
       <a data-tip={description} data-event="click focus">
         i
       </a>
