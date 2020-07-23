@@ -17,12 +17,13 @@
   background: $dark-gray-50-opacity;
 
   justify-content: space-between;
+  
   .activityCardTitle {
     background: none;
     border: none;
     color: inherit;
     font-size: inherit;
-    font-weight: inherit;
+    font-family: inherit;
     display: flex;
     cursor: pointer;
     margin: 0 auto;
