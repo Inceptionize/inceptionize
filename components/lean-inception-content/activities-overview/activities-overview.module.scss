@@ -58,10 +58,6 @@
     font-size: 15px;
     opacity: 1 !important;
     color: $white;
-    &:after {
-      border-bottom-color: $information-tooltip-gray !important;
-      border-top-color: $information-tooltip-gray !important;
-    }
   }
   
 

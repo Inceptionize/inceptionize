@@ -58,7 +58,12 @@ function ActivityCard({ title, description }: ActivityCardProps): ReactElement {
       <a data-tip={description} data-event="click focus">
         i
       </a>
-      <ReactTooltip type="light" globalEventOff="click" className={styles.information}></ReactTooltip>
+      <ReactTooltip
+        arrowColor="#6b6b6b"
+        type="light"
+        globalEventOff="click"
+        className={styles.information}
+      ></ReactTooltip>
     </div>
   );
 }
