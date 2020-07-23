@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { ReactElement } from "react";
+import React, { ReactElement, useEffect } from "react";
 import styles from "../activities-overview.module.scss";
 import Modal from "react-modal";
 
@@ -8,10 +8,11 @@ interface ActivityCardProps {
   description: string;
 }
 
-Modal.setAppElement("#modal");
-
 function ActivityModal({ title, description }: ActivityCardProps): ReactElement {
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  useEffect(() => {
+    Modal.setAppElement("#modal");
+  });
 
   function openModal() {
     setIsOpen(true);
