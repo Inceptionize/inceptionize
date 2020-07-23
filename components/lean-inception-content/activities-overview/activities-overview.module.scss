@@ -28,6 +28,10 @@
     cursor: pointer;
     margin: 0 auto;
     height: max-content;
+    
+    &:focus {
+      outline:0;
+    }
   }
 
   h3 {
