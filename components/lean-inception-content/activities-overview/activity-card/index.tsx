@@ -2,7 +2,6 @@
 import React, { ReactElement, useContext } from "react";
 import styles from "../activities-overview.module.scss";
 import ReactTooltip from "react-tooltip";
-import Modal from "react-modal";
 import { AppContext } from "../../../context/app-context";
 import { selectModalVisible } from "../../../../state/selector";
 import ActivityModal from "../activity-modal";
@@ -11,8 +10,6 @@ interface ActivityCardProps {
   title: string;
   description: string;
 }
-
-Modal.setAppElement("#modal");
 
 function ActivityCard({ title, description }: ActivityCardProps): ReactElement {
   const { state } = useContext(AppContext);
