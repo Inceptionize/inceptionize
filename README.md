@@ -35,3 +35,7 @@ The application is running on Netlify, available [here](https://inceptionize.net
 ### Using external libraries
 
 For visualising the agenda, we used [Big Calendar](https://github.com/jquense/react-big-calendar) library. For tooltips on inception activities, we used [React Tooltip](https://wwayne.github.io/react-tooltip/) library.
+
+### Using git mob
+
+The members of this project are using [git mob](https://www.npmjs.com/package/git-mob) to co-author commit messages.
