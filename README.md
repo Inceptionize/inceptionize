@@ -39,3 +39,4 @@ For visualising the agenda, we used [Big Calendar](https://github.com/jquense/re
 ### Using git mob
 
 The members of this project are using [git mob](https://www.npmjs.com/package/git-mob) to co-author commit messages.
+`git mob <initials>`
