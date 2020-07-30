@@ -23,6 +23,7 @@ export default [
     end: 9.75,
     desc: `Let's get to know each other (personal facts skill level, past papers, current functions , teams, etc. )
     before entering deeper into the inception activities.`,
+    imagePath: "",
   },
   {
     title: "Kick-off",
@@ -33,6 +34,7 @@ export default [
     main objectives of the project and product. This initial communication allows all participants to have have
     an overview and a common understanding of what should be achieved. After the conversation about the
     initiative, the inception facilitator will share the inception agenda.`,
+    imagePath: "",
   },
   {
     title: "Product Vision",
@@ -50,6 +52,7 @@ export default [
     end: 12,
     desc: `Each active team member will share what they understand about the product goals. This should be discussed in
     order for the team to reach a consensus on what is really important.`,
+    imagePath: "",
   },
   {
     title: "Personas",
@@ -58,6 +61,7 @@ export default [
     end: 16,
     desc: `To effectively identify the features of a system , we consider important to keep in mind the users and their
     goals. The way that we normally use to represent these users is through personas.`,
+    imagePath: "",
   },
   {
     title: "User Journeys",
@@ -66,6 +70,7 @@ export default [
     end: 12,
     desc: `The user journey describes a user's path through a sequence of steps to achieve a goal . Some of these steps
     represent different points of contact with the product , featuring user interaction with it.`,
+    imagePath: "",
   },
   {
     title: "Features Brainstorming",
@@ -76,6 +81,7 @@ export default [
     detailed statement, and invite facebook friends. The description of a feature should be as simple as
     possible. The user is trying to do something. The product should have a feature to allow it. Which feature
     is it?`,
+    imagePath: "",
   },
   {
     title: "Technical, UX and Business Review",
@@ -84,6 +90,7 @@ export default [
     end: 12,
     desc: `Let's verify how the team feels about the technical understanding, the business expectations and the user
     desire for each feature, as well as the effort and perceived value associated with it.`,
+    imagePath: "",
   },
   {
     title: "Feature Sequencer",
@@ -92,6 +99,7 @@ export default [
     end: 16,
     desc: `Let´s take a look at all product features. Let´s consider the personas and its journeys. It´s time to draw
     up a delivery plan, consistent with the concept of MVP.`,
+    imagePath: "",
   },
   {
     title: "MVP Canvas",
@@ -101,6 +109,7 @@ export default [
     desc: `We´ll create a canvas, which will make clear the MVP proposal, the assumptions of the business, the
     collected metrics, the features, the personas and their journeys, and the cost and schedule for delivery of
     the same.`,
+    imagePath: "",
   },
   {
     title: "Showcase",
@@ -109,5 +118,6 @@ export default [
     end: 16,
     desc: `At the end of the week, and after fulfilling all the planned activities, we will share with all the people
     involved in the project (including stalehoolders) the results obtained throughout the inception.`,
+    imagePath: "",
   },
 ];

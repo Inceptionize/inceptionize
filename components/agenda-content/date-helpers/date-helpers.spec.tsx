@@ -22,6 +22,7 @@ describe("date-helpers", () => {
       start: 10,
       end: 12,
       desc: "Pre-meeting meeting, to prepare for the meeting",
+      imagePath: "",
     };
 
     const calendarEvent: CalendarEvent = {
@@ -43,6 +44,7 @@ describe("date-helpers", () => {
       start: 10,
       end: 12,
       desc: "Pre-meeting meeting, to prepare for the meeting",
+      imagePath: "",
     };
 
     const calendarEvent: CalendarEvent = {
