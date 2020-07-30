@@ -12,7 +12,7 @@ function ActivitiesOverview(): ReactElement {
       </h2>
       <div data-testid="activities-overview" className={styles.cards}>
         {events.map((event: EventConfig, index) => {
-          return <ActivityCard key={index} title={event.title} description={event.desc} />;
+          return <ActivityCard key={index} title={event.title} desc={event.desc} imagePath={event.imagePath} />;
         })}
       </div>
     </div>

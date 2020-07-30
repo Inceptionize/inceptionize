@@ -6,9 +6,10 @@ import Modal from "react-modal";
 interface ActivityCardProps {
   title: string;
   description: string;
+  imagePath: string;
 }
 
-function ActivityModal({ title, description }: ActivityCardProps): ReactElement {
+function ActivityModal({ title, description, imagePath }: ActivityCardProps): ReactElement {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   useEffect(() => {
     Modal.setAppElement("#modal");
@@ -41,6 +42,7 @@ function ActivityModal({ title, description }: ActivityCardProps): ReactElement 
         <button onClick={closeModal}>close</button>
         <h2>{title}</h2>
         <p>{description}</p>
+        <img src={imagePath} alt={"Activity"} />
       </Modal>
     </div>
   );

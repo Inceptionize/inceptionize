@@ -8,18 +8,19 @@ import ActivityModal from "../activity-modal";
 
 interface ActivityCardProps {
   title: string;
-  description: string;
+  desc: string;
+  imagePath: string;
 }
 
-function ActivityCard({ title, description }: ActivityCardProps): ReactElement {
+function ActivityCard({ title, desc, imagePath }: ActivityCardProps): ReactElement {
   const { state } = useContext(AppContext);
   const isModalVisible = selectModalVisible(state);
 
   return (
     <div className={styles.card}>
-      {isModalVisible ? <ActivityModal title={title} description={description} /> : <h3>{title}</h3>}
+      {isModalVisible ? <ActivityModal title={title} description={desc} imagePath={imagePath} /> : <h3>{title}</h3>}
 
-      <a data-tip={description} data-event="click focus">
+      <a data-tip={desc} data-event="click focus">
         i
       </a>
       <ReactTooltip

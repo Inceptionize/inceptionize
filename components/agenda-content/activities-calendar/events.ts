@@ -4,6 +4,7 @@ export interface EventConfig {
   day: number;
   start: number;
   end: number;
+  imagePath: string;
 }
 
 export interface CalendarEvent {
@@ -40,6 +41,7 @@ export default [
     end: 16,
     desc: `Understanding the need of the product will lead the following activities. All starts with a common vision,
     written together, by all team members.`,
+    imagePath: "activities/product-vision.png",
   },
   {
     title: "Product Objectives",
