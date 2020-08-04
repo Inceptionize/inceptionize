@@ -37,9 +37,12 @@ function ActivityModal({ title, description, imagePath }: ActivityCardProps): Re
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
-        style={{ content: { background: "#6b6b6b" } }}
+        className={styles.modal}
+        overlayClassName={styles.overlay}
       >
-        <button onClick={closeModal}>close</button>
+        <button onClick={closeModal} className={styles.closeModalBtn}>
+          X
+        </button>
         <h2>{title}</h2>
         <p>{description}</p>
         <img src={imagePath} alt={"Activity"} />

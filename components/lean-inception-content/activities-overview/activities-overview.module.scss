@@ -17,7 +17,7 @@
   background: $dark-gray-50-opacity;
 
   justify-content: space-between;
-  
+
   .activityCardTitle {
     background: none;
     border: none;
@@ -28,9 +28,9 @@
     cursor: pointer;
     margin: 0 auto;
     height: max-content;
-    
+
     &:focus {
-      outline:0;
+      outline: 0;
     }
   }
 
@@ -42,7 +42,7 @@
 
   a {
     background-color: $link-color-pink;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
     font-size: 0.9em;
     color: white;
     border-radius: 50%;
@@ -64,10 +64,41 @@
     opacity: 1 !important;
     color: $white;
   }
-  
-
-
- 
-  
 }
 
+.closeModalBtn {
+  background-color: $link-color-pink;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  width: 25px;
+  height: 25px;
+  align-self: flex-end;
+  outline: none;
+}
+
+.modal {
+  background: $information-modal-gray;
+  // background: $information-tooltip-gray;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  padding: 25px;
+  border-radius: 4px;
+  border: 1px solid $white-50-opacity;
+  outline: none;
+  overflow: auto;
+}
+
+.overlay {
+  background-color: $black-80-opacity;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
