@@ -80,12 +80,9 @@
 .modal {
   background: $information-modal-gray;
   display: flex;
+  width: 80%;
+  height: 80vh;
   flex-direction: column;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  right: 10%;
-  bottom: 10%;
   padding: 25px;
   border-radius: 4px;
   border: 1px solid $white-50-opacity;
@@ -94,6 +91,9 @@
 }
 
 .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $black-80-opacity;
   position: fixed;
   top: 0;
