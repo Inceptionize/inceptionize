@@ -45,7 +45,7 @@ function ActivityModal({ title, description, imagePath }: ActivityCardProps): Re
         </button>
         <h2>{title}</h2>
         <p>{description}</p>
-        <img src={imagePath} alt={"Activity"} />
+        {imagePath ? <img src={imagePath} alt={"Activity"} /> : null}
       </Modal>
     </div>
   );
