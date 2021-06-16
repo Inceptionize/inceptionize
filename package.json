@@ -17,7 +17,7 @@
     "react-big-calendar": "^0.26.0",
     "react-dom": "16.13.1",
     "react-ga": "^3.1.2",
-    "react-modal": "^3.11.2",
+    "react-modal": "^3.14.3",
     "react-tooltip": "^4.2.7",
     "stylelint-config-sass-guidelines": "^7.0.0"
   },
